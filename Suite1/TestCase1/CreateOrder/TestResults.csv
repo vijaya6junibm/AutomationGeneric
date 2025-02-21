@@ -1,0 +1,2081 @@
+Create Order TC_001,20250127-1626,20250127162656,"<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool""
+    OrderDate=""2024-06-24T11:07:46-0500"" OrderName=""106""
+    OrderNo=""20250127162656"" OrderType=""Personal"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemDesc=""FAMOSA NANCY BAIL"" ItemID=""20250127162656"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""899.00""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName=""""
+        MobilePhone="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoShipTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoContact AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250127162656', 'OrderHeaderKey': '20250127105657910909', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1440,20250212144039483,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212144039483""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212144039483"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212144039483"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212144039483', 'OrderHeaderKey': '202502120910481045019', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1441,20250212144057989,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212144057989""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212144057989"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212144057989"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212144057989', 'OrderHeaderKey': '202502120911011045059', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1441,20250212144123842,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212144123842""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212144123842"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212144123842"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212144123842', 'OrderHeaderKey': '202502120911271045090', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1441,20250212144130595,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212144130595""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212144130595"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212144130595"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212144130595', 'OrderHeaderKey': '202502120911341045130', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1453,20250212145340547,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212145340547""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212145340547"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212145340547"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212145340547', 'OrderHeaderKey': '202502120923431045267', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1454,202502121454014,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""202502121454014""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""202502121454014"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""202502121454014"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '202502121454014', 'OrderHeaderKey': '202502120924031045338', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1457,20250212145705231,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212145705231""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212145705231"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212145705231"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212145705231', 'OrderHeaderKey': '202502120927071045409', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1457,20250212145746296,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212145746296""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212145746296"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212145746296"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212145746296', 'OrderHeaderKey': '202502120927481045458', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1501,20250212150110937,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150110937""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150110937"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150110937"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150110937', 'OrderHeaderKey': '202502120931131045613', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1504,20250212150412347,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150412347""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150412347"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150412347"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150412347', 'OrderHeaderKey': '202502120934151045684', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1504,20250212150425898,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150425898""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150425898"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150425898"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150425898', 'OrderHeaderKey': '202502120934281045755', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1505,20250212150519633,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150519633""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150519633"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150519633"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150519633', 'OrderHeaderKey': '202502120935221045826', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1506,20250212150601522,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150601522""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150601522"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150601522"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150601522', 'OrderHeaderKey': '202502120936041045897', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1507,20250212150737185,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150737185""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150737185"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150737185"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150737185', 'OrderHeaderKey': '202502120937391045968', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1508,20250212150805241,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150805241""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150805241"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150805241"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150805241', 'OrderHeaderKey': '202502120938071046039', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1508,20250212150840444,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212150840444""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212150840444"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212150840444"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212150840444', 'OrderHeaderKey': '202502120938431046110', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1536,20250212153655132,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212153655132""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212153655132"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212153655132"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212153655132', 'OrderHeaderKey': '202502121005111046287', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1539,20250212153904390,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212153904390""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212153904390"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212153904390"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212153904390', 'OrderHeaderKey': '202502121007211046358', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1542,20250212154245147,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212154245147""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212154245147"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212154245147"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212154245147', 'OrderHeaderKey': '202502121011011046535', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1544,20250212154427472,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212154427472""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212154427472"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212154427472"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212154427472', 'OrderHeaderKey': '202502121012441046606', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1546,20250212154636618,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212154636618""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212154636618"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212154636618"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212154636618', 'OrderHeaderKey': '202502121014531046677', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1547,20250212154725471,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212154725471""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212154725471"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212154725471"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212154725471', 'OrderHeaderKey': '202502121015421046748', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1550,20250212155034270,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212155034270""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212155034270"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212155034270"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212155034270', 'OrderHeaderKey': '202502121018511046819', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1555,2025021215550175,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""2025021215550175""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""2025021215550175"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""2025021215550175"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '2025021215550175', 'OrderHeaderKey': '202502121023171046996', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1556,20250212155627668,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212155627668""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212155627668"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212155627668"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212155627668', 'OrderHeaderKey': '202502121024441047067', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1600,20250212160009312,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212160009312""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212160009312"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212160009312"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212160009312', 'OrderHeaderKey': '202502121028261047138', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1819,20250212181857990,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212181857990""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212181857990"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212181857990"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212181857990', 'OrderHeaderKey': '202502121249011047598', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1820,20250212181959786,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212181959786""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212181959786"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212181959786"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212181959786', 'OrderHeaderKey': '202502121250021047669', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1827,20250212182715877,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212182715877""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212182715877"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212182715877"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212182715877', 'OrderHeaderKey': '202502121257181047894', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1827,20250212182721525,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212182721525""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212182721525"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212182721525"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212182721525', 'OrderHeaderKey': '202502121257241047934', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1832,20250212183211167,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212183211167""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212183211167"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212183211167"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212183211167', 'OrderHeaderKey': '202502121302141048071', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1835,20250212183528835,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212183528835""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212183528835"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212183528835"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212183528835', 'OrderHeaderKey': '202502121305311048120', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1836,20250212183600451,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212183600451""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212183600451"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212183600451"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212183600451', 'OrderHeaderKey': '202502121306031048191', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1836,20250212183632718,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212183632718""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212183632718"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212183632718"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212183632718', 'OrderHeaderKey': '202502121306351048262', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1837,2025021218370491,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""2025021218370491""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""2025021218370491"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""2025021218370491"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '2025021218370491', 'OrderHeaderKey': '202502121307061048333', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1838,20250212183824714,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212183824714""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212183824714"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212183824714"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212183824714', 'OrderHeaderKey': '202502121308271048404', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1840,20250212183959624,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212183959624""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212183959624"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212183959624"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212183959624', 'OrderHeaderKey': '202502121310021048475', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1840,20250212184030666,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212184030666""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212184030666"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212184030666"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212184030666', 'OrderHeaderKey': '202502121310331048652', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1841,20250212184104553,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212184104553""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212184104553"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212184104553"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212184104553', 'OrderHeaderKey': '202502121311071048701', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1842,20250212184210637,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212184210637""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212184210637"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212184210637"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212184210637', 'OrderHeaderKey': '202502121312131048750', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1851,20250212185134368,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212185134368""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212185134368"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212185134368"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212185134368', 'OrderHeaderKey': '202502121321361048937', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1852,20250212185240791,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212185240791""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212185240791"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212185240791"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212185240791', 'OrderHeaderKey': '202502121322431049008', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1905,20250212190514658,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212190514658""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212190514658"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212190514658"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212190514658', 'OrderHeaderKey': '202502121335171049185', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1905,20250212190543312,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212190543312""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212190543312"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212190543312"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212190543312', 'OrderHeaderKey': '202502121335461049256', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1906,20250212190646737,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212190646737""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212190646737"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212190646737"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212190646737', 'OrderHeaderKey': '202502121336491049327', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-1907,20250212190728221,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212190728221""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212190728221"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212190728221"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212190728221', 'OrderHeaderKey': '202502121337301049398', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-2128,20250212212831121,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212212831121""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212212831121"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212212831121"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212212831121', 'OrderHeaderKey': '202502121404101049553', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-2129,20250212212934420,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212212934420""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212212934420"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212212934420"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212212934420', 'OrderHeaderKey': '202502121405131049602', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-2130,20250212213028689,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212213028689""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212213028689"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212213028689"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212213028689', 'OrderHeaderKey': '202502121406071049651', 'EnterpriseCode': 'Liverpool'}"
+Create Order TC_001,20250212-2139,20250212213910487,"<?xml version=""1.0"" encoding=""ISO-8859-1"" standalone=""yes""?>
+<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o13556164996"" CustomerRewardsNo=""5491060181"" DocumentType=""0001""
+DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-09T13:09:54-06:00"" OrderName=""N9300042969"" OrderNo=""20250212213910487""
+OrderType=""Personal"">
+	<OrderLines>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""">
+			<Item ItemDesc="" "" ItemID=""20250212213910487"" UnitOfMeasure=""UN""/>
+			<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""120.69"" UnitPrice=""120.69""/>
+			<References>
+				<Reference Name=""Promotion1"" Value=""10% de descuento""/>
+				<Reference Name=""DiscountAmount"" Value=""164.9""/>
+			</References>
+		</OrderLine>
+		<OrderLine Delivery="""" FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"" Store="""" ShipNode="""">
+            <Item ItemDesc=""CHAROLA GIRATORIA AILE, 48CM HAUS"" ItemID=""20250212213910487"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" ListPrice=""471.0"" UnitPrice=""471.0""/>
+            <References>
+                <Reference Name=""Promotion1"" Value=""40% de descuento""/>
+                <Reference Name=""DiscountAmount"" Value=""314.0""/>
+            </References>
+        </OrderLine>
+	</OrderLines>
+	<PersonInfoShipTo AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN"" AddressLine5=""ATIZAPAN DE ZARAGOZA""
+	AddressLine6=""Entre calle El Oro y Acolman"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363"" EMailID=""espinosaquique@hotmail.com""
+	FirstName=""Jorge"" LastName=""Espinosa"" MiddleName=""Enrique"" MobilePhone=""5585367271"" State=""MEXICO"" ZipCode=""52977""/>
+	<PersonInfoBillTo AddressLine1=""MUNICIPIO LIBRE 38"" AddressLine2=""50169643"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""ATIZAPAN DE ZARAGOZA"" Country=""MX"" DayPhone=""50169643""
+	FirstName=""JORGE ENRIQUE ESPINOSA"" LastName="""" State=""EM"" ZipCode=""52977""/>
+	<PersonInfoContact AddressLine1=""Municipio Libre"" AddressLine2=""38"" AddressLine4=""LOMAS DE ATIZAPAN""
+	AddressLine5=""ATIZAPAN DE ZARAGOZA"" City=""Lopez Mateos"" Country=""MX"" DayPhone=""55-58249363""
+	EMailID=""espinosaquique@hotmail.com"" FirstName=""JORGE ENRIQUE"" LastName=""ESPINOSA"" State=""MEXICO"" ZipCode=""52977""/>
+	<HeaderCharges>
+		<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+	</HeaderCharges>
+	<References>
+		<Reference Name=""TicketNo"" Value=""4150016090""/>
+		<Reference Name=""BankAuthNo"" Value=""00050636""/>
+	</References>
+</Order>
+
+","{'DocumentType': '0001', 'OrderNo': '20250212213910487', 'OrderHeaderKey': '202502121414491049828', 'EnterpriseCode': 'Liverpool'}"
