@@ -15,6 +15,7 @@ ${scheduleOrder_Input_file_Name}    scheduleOrder
 ${releaseOrder_Input_file_Name}    releaseOrder
 ${getOrderReleaseList_Input_file_Name}    getOrderReleaseList
 ${getOrderDetails_Input_file_Name}    getOrderDetails
+${confirmShipment_Input_file_Name}    confirmShipment
 
 *** Keywords ***
 
@@ -54,14 +55,11 @@ Manage MultiApi Ulta
 Get Order Details
     [Arguments]         ${CUR_DIR}    ${status_name}    ${OrderNo}
     ${getOrderDetailsxmlRequest}=     Generic Input File Ord    ${CUR_DIR}    ${getOrderDetails_Input_file_Name}    ${OrderNo}
-    Log To Console    ${getOrderDetailsxmlRequest}
-    ${resp}=     Creating Session Sample1    ${getOrderDetailsxmlRequest}   ${getOrderDetailsxmlRequest}
-    Log To Console    ${resp.content}
-    ${order}=     Get Element    ${resp.content}    .//Order
+    ${getOrderDetailResp}=     Creating Session Sample1    ${getOrderDetailsxmlRequest}   ${getOrderDetailsxmlRequest}
+    ${order}=     Get Element    ${getOrderDetailResp.content}    .//Order
     ${Status}=    Get Element Attribute    ${order}    Status
-    Log To Console    'status ----------------------------'
-    Log To Console    ${Status}
     Should Be Equal As Strings    ${Status}    ${status_name}
+    RETURN     ${getOrderDetailResp}
     
 
 Fetch Order Output

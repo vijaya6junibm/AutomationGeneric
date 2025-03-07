@@ -75,6 +75,22 @@ def generic_input_file_oh(folder_path,file_name,oh):
         doc = doc.replace('${OrderHeaderKey}', oh)
     return doc
 
+def generic_input_file_ship(folder_path,file_name,orderReleaseKey,CarrierServiceCode,EnterpriseCode,SCAC,ShipNode,OrderLineKey,OrderedQty,DocumentType,OrderNo):
+    folder_path1 = "\\".join(folder_path.split("\\")[0:-1])
+    tpath = folder_path1 + '/Input/'+file_name+'.xml'
+    with open(tpath) as fd:
+        doc = fd.read()
+        doc = doc.replace('${OrderReleaseKey}', orderReleaseKey)
+        doc = doc.replace('${CarrierServiceCode}', CarrierServiceCode)
+        doc = doc.replace('${EnterpriseCode}', EnterpriseCode)
+        doc = doc.replace('${SCAC}', SCAC)
+        doc = doc.replace('${ShipNode}', ShipNode)
+        doc = doc.replace('${OrderLineKey}', OrderLineKey)
+        doc = doc.replace('${OrderedQty}', OrderedQty)
+        doc = doc.replace('${DocumentType}', DocumentType)
+        doc = doc.replace('${OrderNo}', OrderNo)
+    return doc
+
 def generic_input_file_ord(folder_path,file_name,oh):
     folder_path1 = "\\".join(folder_path.split("\\")[0:-1])
     tpath = folder_path1 + '/Input/'+file_name+'.xml'
