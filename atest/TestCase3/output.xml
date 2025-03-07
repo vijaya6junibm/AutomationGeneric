@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-03-07T21:00:00.398059" rpa="false" schemaversion="5">
+<suite id="s1" name="CreateOrder" source="C:\automation\AutomationGeneric\atest\TestCase3\CreateOrder">
+<suite id="s1-s1" name="Test" source="C:\automation\AutomationGeneric\atest\TestCase3\CreateOrder\test">
+<suite id="s1-s1-s1" name="TC 001" source="C:\automation\AutomationGeneric\atest\TestCase3\CreateOrder\test\TC_001.robot">
+<test id="s1-s1-s1-t1" name="Create Order" line="21">
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-07T21:00:01.215643" level="INFO">${xmlRequest} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:Test Case to debug Jenkins --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="getOrderReleaseList"&gt;
+		&lt;Input&gt;
+			&lt;OrderRelease OrderHeaderKey="202...</msg>
+<var>${xmlRequest}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${getOrderReleaseList_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-07T21:00:01.215139" elapsed="0.000555"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${xmlRequest}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T21:00:01.215999" elapsed="0.000388"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-07T21:00:01.216980" level="INFO">Creating Session using : alias=getOrderReleaseList, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-07T21:00:01.216890" elapsed="0.000217"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-07T21:00:01.217363" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;!-- ExecuteType:Ster...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-07T21:00:01.217190" elapsed="0.000189"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-07T21:00:04.020957" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3ATest+Case+to+debug+Jenkins+--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderReleaseList%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrderRelease+OrderHeaderKey%3D%2220250307074316347663%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrderReleaseList+TotalOrderReleaseList%3D%22%22%3E%0A%09%09%09%09%3COrderRelease+OrderReleaseKey%3D%22%22+DocumentType%3D%22%22+EnterpriseCode%3D%22%22+SCAC%3D%22%22+CarrierServiceCode%3D%22%22+ShipNode%3D%22%22%2F%3E%0A%09%09%09%3C%2FOrderReleaseList%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3ATest+Case+to+debug+Jenkins+--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderReleaseList%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrderRelease+OrderHeaderKey%3D%2220250307074316347663%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrderReleaseList+TotalOrderReleaseList%3D%22%22%3E%0A%09%09%09%09%3COrderRelease+OrderReleaseKey%3D%22%22+DocumentType%3D%22%22+EnterpriseCode%3D%22%22+SCAC%3D%22%22+CarrierServiceCode%3D%22%22+ShipNode%3D%22%22%2F%3E%0A%09%09%09%3C%2FOrderReleaseList%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-07T21:00:04.021213" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3ATest+Case+to+debug+Jenkins+--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderReleaseList%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrderRelease+OrderHeaderKey%3D%2220250307074316347663%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrderReleaseList+TotalOrderReleaseList%3D%22%22%3E%0A%09%09%09%09%3COrderRelease+OrderReleaseKey%3D%22%22+DocumentType%3D%22%22+EnterpriseCode%3D%22%22+SCAC%3D%22%22+CarrierServiceCode%3D%22%22+ShipNode%3D%22%22%2F%3E%0A%09%09%09%3C%2FOrderReleaseList%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000RZ-LRITuNpVsdC6OvQGhcCl:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 07 Mar 2025 15:30:04 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name="getOrderReleaseList"&gt;&lt;Output&gt;&lt;OrderReleaseList LastOrderReleaseKey="20250307074319347707" LastRecordSet="Y" ReadFromHistory="" TotalOrderReleaseList="1"&gt;&lt;OrderRelease CarrierServiceCode="STD" DocumentType="0001" EnterpriseCode="CCULTA" OrderReleaseKey="20250307074319347707" SCAC="02" ShipNode="0888"/&gt;&lt;/OrderReleaseList&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-07T21:00:04.021447" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-07T21:00:01.217463" elapsed="2.804024"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-07T21:00:04.021609" elapsed="0.000065"/>
+</return>
+<msg time="2025-03-07T21:00:04.021909" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${getOrderReleaseList_Input_file_Name}</arg>
+<arg>${xmlRequest}</arg>
+<status status="PASS" start="2025-03-07T21:00:01.216659" elapsed="2.805289"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-07T21:00:04.023365" level="INFO">${orderNo2} = None</msg>
+<var>${orderNo2}</var>
+<arg>${resp.content}</arg>
+<arg>//OrderRelease/@OrderReleaseKey</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.022336" elapsed="0.001083"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-07T21:00:04.024179" level="INFO">${orderNo} = None</msg>
+<var>${orderNo}</var>
+<arg>${resp.content}</arg>
+<arg>.//OrderReleaseList/OrderRelease[@OrderReleaseKey]</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.023730" elapsed="0.000467"/>
+</kw>
+<kw name="Parse Xml" owner="XML">
+<arg>${resp.content}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.024631" elapsed="0.000418"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-07T21:00:04.025863" level="INFO">${orderAttr} = &lt;Element 'OrderRelease' at 0x0000029233DA5FD0&gt;</msg>
+<var>${orderAttr}</var>
+<arg>${resp.content}</arg>
+<arg>.//OrderReleaseList/OrderRelease</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.025347" elapsed="0.000536"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-07T21:00:04.026383" level="INFO">${orderReleaseKey} = 20250307074319347707</msg>
+<var>${orderReleaseKey}</var>
+<arg>${orderAttr}</arg>
+<arg>OrderReleaseKey</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.026202" elapsed="0.000198"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'orderReleaseKey'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.026622" elapsed="0.000383"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orderReleaseKey}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T21:00:04.027596" elapsed="0.000265"/>
+</kw>
+<status status="PASS" start="2025-03-07T21:00:01.214335" elapsed="2.813721"/>
+</test>
+<status status="PASS" start="2025-03-07T21:00:00.442704" elapsed="3.586250"/>
+</suite>
+<status status="PASS" start="2025-03-07T21:00:00.441091" elapsed="3.588822"/>
+</suite>
+<status status="PASS" start="2025-03-07T21:00:00.399578" elapsed="3.631546"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="CreateOrder">CreateOrder</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test">CreateOrder.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="TC 001">CreateOrder.Test.TC 001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

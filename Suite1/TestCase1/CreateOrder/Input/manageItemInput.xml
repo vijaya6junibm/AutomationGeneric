@@ -1,5 +1,8 @@
-<ItemList>
-	<Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN">
+<MultiApi>
+	<API Name="manageItem">
+		<Input>
+			<ItemList>
+	<Item Action="Manage" GlobalItemID="12439482" ItemID="12439482" OrganizationCode="Liverpool" UnitOfMeasure="UN">
 		<Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/>
 		<PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/>
 		<ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/>
@@ -9,3 +12,6 @@
 		</ItemAliasList>
 	</Item>
 </ItemList>
+		</Input>
+	</API>
+</MultiApi>

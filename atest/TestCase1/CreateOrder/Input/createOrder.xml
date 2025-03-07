@@ -1,0 +1,44 @@
+<!-- ExecuteType:SterlingApi -->
+<!-- ExecuteMethod:multiApi -->
+<!--TestDesc:  -->
+<MultiApi>
+	<API FlowName="UltaCreateOrder">
+		<Input>
+			<Order xmlns:tns="http://tns.tibco.com/bw/json/1680017115271" xmlns:tns1="http://www.example.com/namespaces/tns/1680017352441" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tib="http://www.tibco.com/bw/xslt/custom-functions" AuthorizedClient="ONL" ReqDeliveryDate="2025-01-30T13:11:00.209+00:00" ExtnIsOrderBorderfree="N" DocumentType="0001" BypassPricing="Y"  ExtnIsPaymentPaypal="Y" OrderDate="2024-12-23T13:11:00.441+00:00" ExtnIsOrderInternational="N" ExtnIsGiftWrap="N" EntryType="WEB" OrderType="REGULAR" ValidatePromotionAward="N" SellerOrganizationCode="CCULTA" PaymentRuleId="ULTA_PMT_RULE" EnterpriseCode="CCULTA">
+				<OrderLines>
+					<OrderLine CarrierServiceCode="STD" DeliveryMethod="SHP" PrimeLineNo="1" ExtnIsItemHazmat="N" SubLineNo="1" SCAC="02" OrderedQty="3.0" LineType="" FulfillmentType="SHIPTOHOME" ShipNode="0888">
+					<Item UnitOfMeasure="EACH" ItemDesc="Shea Butter Hand Cream" ItemID="2500553"/>
+					<LinePriceInfo IsPriceLocked="Y" ListPrice="10.0" UnitPrice="10.0" />
+					<Extn ExtnIsItemOnSale="N" ExtnATGUnitPriceJson="{&quot;skuPriceDetail&quot;:{&quot;skuID&quot;:&quot;2241131&quot;,&quot;priceDetails&quot;:[{&quot;price&quot;:30.0,&quot;qty&quot;:1}]}}" ExtnOverriddenDeliveryMethod="" ExtnHazmatStatus="N" ExtnATGLineItemID="6f3063b4-0f4d-4aa7-a94c-c9662c2d71ef" />
+				</OrderLine>
+				<OrderLine CarrierServiceCode="STD" DeliveryMethod="SHP" PrimeLineNo="2" ExtnIsItemHazmat="N" SubLineNo="1" SCAC="02" OrderedQty="2.0" LineType="" FulfillmentType="SHIPTOHOME" ShipNode="0888">
+					<Item UnitOfMeasure="EACH" ItemDesc="Shea Butter Hand Cream" ItemID="2500553"/>
+					<LinePriceInfo IsPriceLocked="Y" ListPrice="10.0" UnitPrice="10.0" />
+					<Extn ExtnIsItemOnSale="N" ExtnATGUnitPriceJson="{&quot;skuPriceDetail&quot;:{&quot;skuID&quot;:&quot;2241131&quot;,&quot;priceDetails&quot;:[{&quot;price&quot;:30.0,&quot;qty&quot;:1}]}}" ExtnOverriddenDeliveryMethod="" ExtnHazmatStatus="N" ExtnATGLineItemID="6f3063b4-0f4d-4aa7-a94c-c9662c2d71ef" />
+				</OrderLine>
+				</OrderLines>
+				<References>
+					<Reference Name="EmailOptIn" Value="N" />
+					<Reference Name="CardType" Value="VISA" />
+					<Reference Name="ChargeAmount" Value="50.00" />
+				</References>
+				<PersonInfoBillTo FirstName="ECOMQA" ZipCode="62249" City="Highland" EMailID="ecomqaoffshore@ulta.com" DayPhone="4086331345" MobilePhone="4086331345" AddressLine2="" AddressLine1="104 Autumn Oaks Lane" State="IL" Country="US" LastName="ECOMQA" />
+				<PersonInfoShipTo FirstName="ABCD" ZipCode="60440" City="bolingbrook" EMailID="9107081@ulta.com" MobilePhone="9188888888" AddressLine1="1000 remington blvd" State="IL" Country="US" LastName="EFGH" />
+				<PaymentMethods>
+					<PaymentMethod MaxChargeLimit="50.00" FirstName="" CreditCardType="CBCC" CreditCardNo="222360******0329" ChargeSequence="0" DisplayCreditCardNo="0329" CreditCardExpDate="202512" CreditCardName="CREDIT_CARD" PaymentType="CREDIT_CARD" LastName="">
+				<PaymentDetailsList>
+					<PaymentDetails RequestAmount="50.00" AuthorizationID="607893" ProcessedAmount="50.00" ChargeType="AUTHORIZATION" />
+				</PaymentDetailsList>
+				<PersonInfoBillTo FirstName="Archana" ZipCode="60440" City="BOLINGBROOK" EMailID="sharmaarc83@gmail.com" MobilePhone="8855568885" AddressLine2="" AddressLine1="1000 REMINGTON BLVD" State="IL" Country="US" LastName="Sharma" />
+			</PaymentMethod>
+				</PaymentMethods>
+				<Extn ExtnIsNonSTDShippingEligible="Y" ExtnOMSSettledOrder="Y" ExtnIsSignatureRequired="N" ExtnReleaseVersion="R2_2_5" ExtnIsGiftWrap="N" ExtnATGOrderTotal="30.00" ExtnDeliveryNotificationPreference="N" ExtnMemberStatus="" ExtnSplitUniqueId="SC202501159">
+					<ExtnOrderWavingDataList>
+						<ExtnOrderWavingData ExtnWavingAttrName="TEST_WAVING_ATTRIBUTE1" ExtnWavingAttrValue="W31" />
+						<ExtnOrderWavingData ExtnWavingAttrName="TEST_WAVING_ATTRIBUTE2" ExtnWavingAttrValue="W41" />
+					</ExtnOrderWavingDataList>
+				</Extn>
+			</Order>
+		</Input>
+	</API>
+</MultiApi>

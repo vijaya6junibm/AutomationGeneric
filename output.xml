@@ -1,494 +1,336 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-02-21T20:06:04.393880" rpa="false" schemaversion="5">
-<suite id="s1" name="Suite1" source="C:\automation\AutomationGeneric\Suite1">
-<suite id="s1-s1" name="TestCase1" source="C:\automation\AutomationGeneric\Suite1\TestCase1">
-<suite id="s1-s1-s1" name="CreateOrder" source="C:\automation\AutomationGeneric\Suite1\TestCase1\CreateOrder">
-<suite id="s1-s1-s1-s1" name="Test" source="C:\automation\AutomationGeneric\Suite1\TestCase1\CreateOrder\test">
-<suite id="s1-s1-s1-s1-s1" name="TC 001" source="C:\automation\AutomationGeneric\Suite1\TestCase1\CreateOrder\test\TC_001.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="Create Order TC_001" line="10">
-<kw name="Create Item Adjust and Fin Inv SL" owner="setUpForCreateOrder" type="SETUP">
-<kw name="Creating Session1" owner="createSession">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-02-21T20:06:06.229498" level="INFO">${auth} = ['admin', 'password']</msg>
-<var>${auth}</var>
-<arg>${user}</arg>
-<arg>${passwd}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-02-21T20:06:06.228893" elapsed="0.000695"/>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-03-07T20:31:11.222380" rpa="false" schemaversion="5">
+<suite id="s1" name="Atest" source="C:\automation\AutomationGeneric\atest">
+<suite id="s1-s1" name="TestCase1" source="C:\automation\AutomationGeneric\atest\TestCase1">
+<suite id="s1-s1-s1" name="CreateOrder" source="C:\automation\AutomationGeneric\atest\TestCase1\CreateOrder">
+<suite id="s1-s1-s1-s1" name="Test" source="C:\automation\AutomationGeneric\atest\TestCase1\CreateOrder\test">
+<suite id="s1-s1-s1-s1-s1" name="TC 001" source="C:\automation\AutomationGeneric\atest\TestCase1\CreateOrder\test\TC_001.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Create Order" line="21">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-03-07T20:31:12.392681" level="INFO">${xmlRequest} = &lt;MultiApi&gt;&lt;API Name="getOrderReleaseList"&gt;&lt;Input&gt;&lt;OrderRelease OrderHeaderKey="20250307074316347663"/&gt;&lt;/Input&gt;&lt;Template&gt;&lt;OrderReleaseList TotalOrderReleaseList=""&gt;&lt;OrderRelease OrderReleaseKey="" Docu...</msg>
+<var>${xmlRequest}</var>
+<arg>&lt;MultiApi&gt;&lt;API Name="getOrderReleaseList"&gt;&lt;Input&gt;&lt;OrderRelease OrderHeaderKey="20250307074316347663"/&gt;&lt;/Input&gt;&lt;Template&gt;&lt;OrderReleaseList TotalOrderReleaseList=""&gt;&lt;OrderRelease OrderReleaseKey="" DocumentType="" EnterpriseCode="" SCAC="" CarrierServiceCode="" ShipNode=""/&gt;&lt;/OrderReleaseList&gt;&lt;/Template&gt;&lt;/API&gt;&lt;/MultiApi&gt;</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-03-07T20:31:12.392428" elapsed="0.000304"/>
 </kw>
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:06.230860" level="INFO">Creating Session using : alias=AddData, url=http://9.30.26.220:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001ABC1F24830&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>${AddData}</arg>
-<arg>url=${base_url_api}${createOrder}</arg>
-<arg>headers=${headers}</arg>
-<arg>auth=${auth}</arg>
+<msg time="2025-03-07T20:31:12.393410" level="INFO">Creating Session using : alias=my_session, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>my_session</arg>
+<arg>${BASE_URL}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-02-21T20:06:06.229963" elapsed="0.001381"/>
+<status status="PASS" start="2025-03-07T20:31:12.393193" elapsed="0.000451"/>
 </kw>
-<arg>AddData</arg>
-<status status="PASS" start="2025-02-21T20:06:06.227186" elapsed="0.004368"/>
-</kw>
-<kw name="Manage Item With Dynamic Item" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:08.234033" level="INFO">before mod &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt;
-after mod &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200606232" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt;</msg>
-<msg time="2025-02-21T20:06:08.234194" level="INFO">${manageItemJson} = &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200606232" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" Ext...</msg>
-<var>${manageItemJson}</var>
-<arg>C:\\automation\\AutomationGeneric\\Suite1\\TestCase1\\CreateOrder\\setUp</arg>
-<status status="PASS" start="2025-02-21T20:06:06.231805" elapsed="2.002423"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-07T20:31:12.394429" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;MultiApi&gt;&lt;API Name="...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-07T20:31:12.394055" elapsed="0.000407"/>
 </kw>
 <kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:08.969447" level="INFO">POST Request : url=http://9.30.26.220:9080/smcfs/restapi/invoke/manageItem 
- path_url=/smcfs/restapi/invoke/manageItem 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '1025'} 
- body=&lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200606232" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt; 
- </msg>
-<msg time="2025-02-21T20:06:08.969541" level="INFO">POST Response : url=http://9.30.26.220:9080/smcfs/restapi/invoke/manageItem 
- status=204, reason=No Content 
- headers={'X-Powered-By': 'Servlet/4.0', 'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Language': 'en-US', 'Content-Length': '0', 'Date': 'Fri, 21 Feb 2025 14:36:09 GMT'} 
+<msg time="2025-03-07T20:31:15.344066" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%3CAPI+Name%3D%22getOrderReleaseList%22%3E%3CInput%3E%3COrderRelease+OrderHeaderKey%3D%2220250307074316347663%22%2F%3E%3C%2FInput%3E%3CTemplate%3E%3COrderReleaseList+TotalOrderReleaseList%3D%22%22%3E%3COrderRelease+OrderReleaseKey%3D%22%22+DocumentType%3D%22%22+EnterpriseCode%3D%22%22+SCAC%3D%22%22+CarrierServiceCode%3D%22%22+ShipNode%3D%22%22%2F%3E%3C%2FOrderReleaseList%3E%3C%2FTemplate%3E%3C%2FAPI%3E%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%3CAPI+Name%3D%22getOrderReleaseList%22%3E%3CInput%3E%3COrderRelease+OrderHeaderKey%3D%2220250307074316347663%22%2F%3E%3C%2FInput%3E%3CTemplate%3E%3COrderReleaseList+TotalOrderReleaseList%3D%22%22%3E%3COrderRelease+OrderReleaseKey%3D%22%22+DocumentType%3D%22%22+EnterpriseCode%3D%22%22+SCAC%3D%22%22+CarrierServiceCode%3D%22%22+ShipNode%3D%22%22%2F%3E%3C%2FOrderReleaseList%3E%3C%2FTemplate%3E%3C%2FAPI%3E%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg time="2025-02-21T20:06:08.969651" level="INFO">${manageItemResponse} = &lt;Response [204]&gt;</msg>
-<var>${manageItemResponse}</var>
-<arg>AddData</arg>
-<arg>${base_url_api}${manageItem}</arg>
-<arg>data=${manageItemJson}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-21T20:06:08.234391" elapsed="0.735282"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>204</arg>
-<arg>${manageItemResponse}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-02-21T20:06:08.969844" elapsed="0.000223"/>
-</kw>
-<kw name="Manage Item With Dynamic Item1" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:08.980159" level="INFO">after mod &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200606232" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt;</msg>
-<msg time="2025-02-21T20:06:08.980417" level="INFO">${jsonItemId} = {'ItemList': {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250221200606232', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnI...</msg>
-<var>${jsonItemId}</var>
-<arg>C:\\automation\\AutomationGeneric\\Suite1\\TestCase1\\CreateOrder\\setUp</arg>
-<status status="PASS" start="2025-02-21T20:06:08.970174" elapsed="0.010268"/>
-</kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${jsonItemId}</arg>
-<arg>ItemList</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-21T20:06:08.980570" elapsed="0.000141"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-02-21T20:06:08.980923" level="INFO">${Item_ID_Path} = {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250221200606232', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnItemSF': 'Y', ...</msg>
-<var>${Item_ID_Path}</var>
-<arg>${jsonItemId}</arg>
-<arg>ItemList</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-02-21T20:06:08.980798" elapsed="0.000142"/>
-</kw>
-<kw name="Adjust Inventory File" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:08.981349" level="INFO">${jsonAdjInv} = &lt;Items&gt;
-	&lt;Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="20250221200606232" OrganizationCode="Liverpool" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNod...</msg>
-<var>${jsonAdjInv}</var>
-<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
-<arg>C:\\automation\\AutomationGeneric\\Suite1\\TestCase1\\CreateOrder\\setUp</arg>
-<status status="PASS" start="2025-02-21T20:06:08.981016" elapsed="0.000364"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:09.365330" level="INFO">POST Request : url=http://9.30.26.220:9080/smcfs/restapi/invoke/adjustInventory 
- path_url=/smcfs/restapi/invoke/adjustInventory 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '256'} 
- body=&lt;Items&gt;
-	&lt;Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="20250221200606232" OrganizationCode="Liverpool" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="77" SupplyType="ONHAND" UnitOfMeasure="UN"/&gt;
-&lt;/Items&gt; 
- </msg>
-<msg time="2025-02-21T20:06:09.365403" level="INFO">POST Response : url=http://9.30.26.220:9080/smcfs/restapi/invoke/adjustInventory 
- status=204, reason=No Content 
- headers={'X-Powered-By': 'Servlet/4.0', 'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Language': 'en-US', 'Content-Length': '0', 'Date': 'Fri, 21 Feb 2025 14:36:09 GMT'} 
- body=None 
- </msg>
-<msg time="2025-02-21T20:06:09.365497" level="INFO">${adjInvresponse} = &lt;Response [204]&gt;</msg>
-<var>${adjInvresponse}</var>
-<arg>AddData</arg>
-<arg>${base_url_api}${adjustInventory}</arg>
-<arg>data=${jsonAdjInv}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-21T20:06:08.981495" elapsed="0.384023"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>204</arg>
-<arg>${adjInvresponse}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-02-21T20:06:09.365655" elapsed="0.000163"/>
-</kw>
-<return>
-<value>${jsonItemId}</value>
-<status status="PASS" start="2025-02-21T20:06:09.365873" elapsed="0.000045"/>
-</return>
-<status status="PASS" start="2025-02-21T20:06:06.226497" elapsed="3.139515"/>
-</kw>
-<kw name="Create Item Adjust and Fin Inv SL" owner="setUpForCreateOrder">
-<kw name="Creating Session1" owner="createSession">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2025-02-21T20:06:09.366958" level="INFO">${auth} = ['admin', 'password']</msg>
-<var>${auth}</var>
-<arg>${user}</arg>
-<arg>${passwd}</arg>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2025-02-21T20:06:09.366842" elapsed="0.000133"/>
-</kw>
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:09.367270" level="INFO">Creating Session using : alias=AddData, url=http://9.30.26.220:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001ABC1F30410&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<arg>${AddData}</arg>
-<arg>url=${base_url_api}${createOrder}</arg>
-<arg>headers=${headers}</arg>
-<arg>auth=${auth}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2025-02-21T20:06:09.367058" elapsed="0.000330"/>
-</kw>
-<arg>AddData</arg>
-<status status="PASS" start="2025-02-21T20:06:09.366673" elapsed="0.000761"/>
-</kw>
-<kw name="Manage Item With Dynamic Item" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:11.368893" level="INFO">before mod &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt;
-after mod &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200609367" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt;</msg>
-<msg time="2025-02-21T20:06:11.369032" level="INFO">${manageItemJson} = &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200609367" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" Ext...</msg>
-<var>${manageItemJson}</var>
-<arg>C:\\automation\\AutomationGeneric\\Suite1\\TestCase1\\CreateOrder\\setUp</arg>
-<status status="PASS" start="2025-02-21T20:06:09.367504" elapsed="2.001549"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:12.101411" level="INFO">POST Request : url=http://9.30.26.220:9080/smcfs/restapi/invoke/manageItem 
- path_url=/smcfs/restapi/invoke/manageItem 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '1025'} 
- body=&lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200609367" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt; 
- </msg>
-<msg time="2025-02-21T20:06:12.101479" level="INFO">POST Response : url=http://9.30.26.220:9080/smcfs/restapi/invoke/manageItem 
- status=204, reason=No Content 
- headers={'X-Powered-By': 'Servlet/4.0', 'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Language': 'en-US', 'Content-Length': '0', 'Date': 'Fri, 21 Feb 2025 14:36:12 GMT'} 
- body=None 
- </msg>
-<msg time="2025-02-21T20:06:12.101577" level="INFO">${manageItemResponse} = &lt;Response [204]&gt;</msg>
-<var>${manageItemResponse}</var>
-<arg>AddData</arg>
-<arg>${base_url_api}${manageItem}</arg>
-<arg>data=${manageItemJson}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-21T20:06:11.369304" elapsed="0.732290"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>204</arg>
-<arg>${manageItemResponse}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-02-21T20:06:12.101798" elapsed="0.000356"/>
-</kw>
-<kw name="Manage Item With Dynamic Item1" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:12.114771" level="INFO">after mod &lt;ItemList&gt;
-	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250221200609367" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
-		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
-		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
-		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
-		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
-		&lt;ItemAliasList Reset="Y"&gt;
-			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
-		&lt;/ItemAliasList&gt;
-	&lt;/Item&gt;
-&lt;/ItemList&gt;</msg>
-<msg time="2025-02-21T20:06:12.114949" level="INFO">${jsonItemId} = {'ItemList': {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250221200609367', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnI...</msg>
-<var>${jsonItemId}</var>
-<arg>C:\\automation\\AutomationGeneric\\Suite1\\TestCase1\\CreateOrder\\setUp</arg>
-<status status="PASS" start="2025-02-21T20:06:12.102365" elapsed="0.012611"/>
-</kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${jsonItemId}</arg>
-<arg>ItemList</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-21T20:06:12.115179" elapsed="0.000232"/>
-</kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-02-21T20:06:12.115735" level="INFO">${Item_ID_Path} = {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250221200609367', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnItemSF': 'Y', ...</msg>
-<var>${Item_ID_Path}</var>
-<arg>${jsonItemId}</arg>
-<arg>ItemList</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-02-21T20:06:12.115551" elapsed="0.000202"/>
-</kw>
-<kw name="Adjust Inventory File" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:12.116157" level="INFO">${jsonAdjInv} = &lt;Items&gt;
-	&lt;Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="20250221200609367" OrganizationCode="Liverpool" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNod...</msg>
-<var>${jsonAdjInv}</var>
-<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
-<arg>C:\\automation\\AutomationGeneric\\Suite1\\TestCase1\\CreateOrder\\setUp</arg>
-<status status="PASS" start="2025-02-21T20:06:12.115837" elapsed="0.000354"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:12.531064" level="INFO">POST Request : url=http://9.30.26.220:9080/smcfs/restapi/invoke/adjustInventory 
- path_url=/smcfs/restapi/invoke/adjustInventory 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '256'} 
- body=&lt;Items&gt;
-	&lt;Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="20250221200609367" OrganizationCode="Liverpool" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="77" SupplyType="ONHAND" UnitOfMeasure="UN"/&gt;
-&lt;/Items&gt; 
- </msg>
-<msg time="2025-02-21T20:06:12.531146" level="INFO">POST Response : url=http://9.30.26.220:9080/smcfs/restapi/invoke/adjustInventory 
- status=204, reason=No Content 
- headers={'X-Powered-By': 'Servlet/4.0', 'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Language': 'en-US', 'Content-Length': '0', 'Date': 'Fri, 21 Feb 2025 14:36:12 GMT'} 
- body=None 
- </msg>
-<msg time="2025-02-21T20:06:12.531268" level="INFO">${adjInvresponse} = &lt;Response [204]&gt;</msg>
-<var>${adjInvresponse}</var>
-<arg>AddData</arg>
-<arg>${base_url_api}${adjustInventory}</arg>
-<arg>data=${jsonAdjInv}</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-21T20:06:12.116285" elapsed="0.415002"/>
-</kw>
-<kw name="Status Should Be" owner="RequestsLibrary">
-<arg>204</arg>
-<arg>${adjInvresponse}</arg>
-<doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2025-02-21T20:06:12.531429" elapsed="0.000177"/>
-</kw>
-<return>
-<value>${jsonItemId}</value>
-<status status="PASS" start="2025-02-21T20:06:12.531652" elapsed="0.000036"/>
-</return>
-<msg time="2025-02-21T20:06:12.531799" level="INFO">${jsonItemId} = {'ItemList': {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250221200609367', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnI...</msg>
-<var>${jsonItemId}</var>
-<status status="PASS" start="2025-02-21T20:06:09.366484" elapsed="3.165382"/>
-</kw>
-<kw name="Create Order SL" owner="CreateOrderKeyword">
-<kw name="Create Order File" owner="Prepare_Xml_Content">
-<msg time="2025-02-21T20:06:12.533163" level="INFO">${jsonCreateOrder} = &lt;?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?&gt;
-&lt;Order AllocationRuleID="FWD_RULES" CustomerPONo="o13556164996" CustomerRewardsNo="5491060181" DocumentType="0001"
-DraftOrderFlag="Y" Enter...</msg>
-<var>${jsonCreateOrder}</var>
-<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
-<arg>${CUR_DIR}</arg>
-<status status="PASS" start="2025-02-21T20:06:12.532770" elapsed="0.000430"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2025-02-21T20:06:13.133426" level="INFO">POST Request : url=http://9.30.26.220:9080/smcfs/restapi/invoke/createOrder 
- path_url=/smcfs/restapi/invoke/createOrder 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '2522'} 
- body=&lt;?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?&gt;
-&lt;Order AllocationRuleID="FWD_RULES" CustomerPONo="o13556164996" CustomerRewardsNo="5491060181" DocumentType="0001"
-DraftOrderFlag="Y" EnterpriseCode="Liverpool" OrderDate="2023-11-09T13:09:54-06:00" OrderName="N9300042969" OrderNo="20250221200609367"
-OrderType="Personal"&gt;
-	&lt;OrderLines&gt;
-		&lt;OrderLine Delivery="" FulfillmentType="Fulfillment_Type_Liverpool" OrderedQty="1" Store=""&gt;
-			&lt;Item ItemDesc=" " ItemID="20250221200609367" UnitOfMeasure="UN"/&gt;
-			&lt;LinePriceInfo IsPriceLocked="Y" ListPrice="120.69" UnitPrice="120.69"/&gt;
-			&lt;References&gt;
-				&lt;Reference Name="Promotion1" Value="10% de descuento"/&gt;
-				&lt;Reference Name="DiscountAmount" Value="164.9"/&gt;
-			&lt;/References&gt;
-		&lt;/OrderLine&gt;
-		&lt;OrderLine Delivery="" FulfillmentType="Fulfillment_Type_Liverpool" OrderedQty="1" Store="" ShipNode=""&gt;
-            &lt;Item ItemDesc="CHAROLA GIRATORIA AILE, 48CM HAUS" ItemID="20250221200609367" UnitOfMeasure="UN"/&gt;
-            &lt;LinePriceInfo IsPriceLocked="Y" ListPrice="471.0" UnitPrice="471.0"/&gt;
-            &lt;References&gt;
-                &lt;Reference Name="Promotion1" Value="40% de descuento"/&gt;
-                &lt;Reference Name="DiscountAmount" Value="314.0"/&gt;
-            &lt;/References&gt;
-        &lt;/OrderLine&gt;
-	&lt;/OrderLines&gt;
-	&lt;PersonInfoShipTo AddressLine1="Municipio Libre" AddressLine2="38" AddressLine4="LOMAS DE ATIZAPAN" AddressLine5="ATIZAPAN DE ZARAGOZA"
-	AddressLine6="Entre calle El Oro y Acolman" City="Lopez Mateos" Country="MX" DayPhone="55-58249363" EMailID="espinosaquique@hotmail.com"
-	FirstName="Jorge" LastName="Espinosa" MiddleName="Enrique" MobilePhone="5585367271" State="MEXICO" ZipCode="52977"/&gt;
-	&lt;PersonInfoBillTo AddressLine1="MUNICIPIO LIBRE 38" AddressLine2="50169643" AddressLine4="LOMAS DE ATIZAPAN"
-	AddressLine5="ATIZAPAN DE ZARAGOZA" City="ATIZAPAN DE ZARAGOZA" Country="MX" DayPhone="50169643"
-	FirstName="JORGE ENRIQUE ESPINOSA" LastName="" State="EM" ZipCode="52977"/&gt;
-	&lt;PersonInfoContact AddressLine1="Municipio Libre" AddressLine2="38" AddressLine4="LOMAS DE ATIZAPAN"
-	AddressLine5="ATIZAPAN DE ZARAGOZA" City="Lopez Mateos" Country="MX" DayPhone="55-58249363"
-	EMailID="espinosaquique@hotmail.com" FirstName="JORGE ENRIQUE" LastName="ESPINOSA" State="MEXICO" ZipCode="52977"/&gt;
-	&lt;HeaderCharges&gt;
-		&lt;HeaderCharge ChargeAmount="0" ChargeCategory="Shipping" ChargeName="Shipping"/&gt;
-	&lt;/HeaderCharges&gt;
-	&lt;References&gt;
-		&lt;Reference Name="TicketNo" Value="4150016090"/&gt;
-		&lt;Reference Name="BankAuthNo" Value="00050636"/&gt;
-	&lt;/References&gt;
-&lt;/Order&gt;
-
- 
- </msg>
-<msg time="2025-02-21T20:06:13.133517" level="INFO">POST Response : url=http://9.30.26.220:9080/smcfs/restapi/invoke/createOrder 
+<msg time="2025-03-07T20:31:15.344313" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%3CAPI+Name%3D%22getOrderReleaseList%22%3E%3CInput%3E%3COrderRelease+OrderHeaderKey%3D%2220250307074316347663%22%2F%3E%3C%2FInput%3E%3CTemplate%3E%3COrderReleaseList+TotalOrderReleaseList%3D%22%22%3E%3COrderRelease+OrderReleaseKey%3D%22%22+DocumentType%3D%22%22+EnterpriseCode%3D%22%22+SCAC%3D%22%22+CarrierServiceCode%3D%22%22+ShipNode%3D%22%22%2F%3E%3C%2FOrderReleaseList%3E%3C%2FTemplate%3E%3C%2FAPI%3E%3C%2FMultiApi%3E&amp;timeout=30 
  status=200, reason=OK 
- headers={'X-Powered-By': 'Servlet/4.0', 'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Content-Length': '121', 'Date': 'Fri, 21 Feb 2025 14:36:13 GMT'} 
- body={"DocumentType":"0001","OrderNo":"20250221200609367","OrderHeaderKey":"202502210636121357095","EnterpriseCode":"Liverpool"} 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000UB42sn92BjvGTV8NwElk3kh:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Fri, 07 Mar 2025 15:01:15 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name="getOrderReleaseList"&gt;&lt;Output&gt;&lt;OrderReleaseList LastOrderReleaseKey="20250307074319347707" LastRecordSet="Y" ReadFromHistory="" TotalOrderReleaseList="1"&gt;&lt;OrderRelease CarrierServiceCode="STD" DocumentType="0001" EnterpriseCode="CCULTA" OrderReleaseKey="20250307074319347707" SCAC="02" ShipNode="0888"/&gt;&lt;/OrderReleaseList&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
  </msg>
-<msg time="2025-02-21T20:06:13.133608" level="INFO">${createOrderResponse} = &lt;Response [200]&gt;</msg>
-<var>${createOrderResponse}</var>
-<arg>AddData</arg>
-<arg>${base_url_api}${createOrder}</arg>
-<arg>data=${jsonCreateOrder}</arg>
-<arg>headers=${headers}</arg>
+<msg time="2025-03-07T20:31:15.344538" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>my_session</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2025-02-21T20:06:12.533313" elapsed="0.600312"/>
+<status status="PASS" start="2025-03-07T20:31:12.394834" elapsed="2.949748"/>
 </kw>
-<kw name="Convert To String" owner="BuiltIn">
-<msg time="2025-02-21T20:06:13.134174" level="INFO">${resp2} = {'DocumentType': '0001', 'OrderNo': '20250221200609367', 'OrderHeaderKey': '202502210636121357095', 'EnterpriseCode': 'Liverpool'}</msg>
-<var>${resp2}</var>
-<arg>${createOrderResponse.json()}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2025-02-21T20:06:13.133761" elapsed="0.000431"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${resp.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.345211" elapsed="0.001383"/>
 </kw>
-<kw name="Write Output File" owner="Prepare_Xml_Content">
-<arg>${resp2}</arg>
-<arg>'createOrder'</arg>
-<arg>${CUR_DIR}</arg>
-<status status="PASS" start="2025-02-21T20:06:13.134277" elapsed="0.000583"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'response content'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.347288" elapsed="0.000469"/>
 </kw>
-<kw name="Get Current Date" owner="DateTime">
-<msg time="2025-02-21T20:06:13.135169" level="INFO">${timestamp} = 20250221-2006</msg>
-<var>${timestamp}</var>
-<arg>result_format=%Y%m%d-%H%M</arg>
-<doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2025-02-21T20:06:13.135000" elapsed="0.000190"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${resp.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.348278" elapsed="0.001509"/>
 </kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${createOrderResponse.json()}</arg>
-<arg>OrderNo</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-21T20:06:13.135273" elapsed="0.000327"/>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-07T20:31:15.352020" level="INFO">${orderNo2} = None</msg>
+<var>${orderNo2}</var>
+<arg>${resp.content}</arg>
+<arg>//OrderRelease/@OrderReleaseKey</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.350730" elapsed="0.001340"/>
 </kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-02-21T20:06:13.135954" level="INFO">${Order_No} = 20250221200609367</msg>
-<var>${Order_No}</var>
-<arg>${createOrderResponse.json()}</arg>
-<arg>OrderNo</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-02-21T20:06:13.135674" elapsed="0.000294"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'blk2'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.352704" elapsed="0.000593"/>
 </kw>
-<kw name="Dictionary Should Contain Key" owner="Collections">
-<arg>${createOrderResponse.json()}</arg>
-<arg>OrderHeaderKey</arg>
-<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2025-02-21T20:06:13.136037" elapsed="0.000261"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orderNo2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.354285" elapsed="0.000492"/>
 </kw>
-<kw name="Get From Dictionary" owner="Collections">
-<msg time="2025-02-21T20:06:13.136631" level="INFO">${Order_Header_Key} = 202502210636121357095</msg>
-<var>${Order_Header_Key}</var>
-<arg>${createOrderResponse.json()}</arg>
-<arg>OrderHeaderKey</arg>
-<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<status status="PASS" start="2025-02-21T20:06:13.136367" elapsed="0.000278"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'parsed xml'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.355165" elapsed="0.000705"/>
 </kw>
-<kw name="Append Excel File1" owner="read_write_all_excel">
-<arg>${file}</arg>
-<arg>${Order_No}</arg>
-<arg>${TEST NAME}</arg>
-<arg>${timestamp}</arg>
-<arg>${jsonCreateOrder}</arg>
-<arg>${createOrderResponse.json()}</arg>
-<status status="PASS" start="2025-02-21T20:06:13.136722" elapsed="0.000812"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${resp.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.356321" elapsed="0.001174"/>
 </kw>
-<arg>${jsonItemId}</arg>
-<arg>${CUR_DIR}</arg>
-<status status="PASS" start="2025-02-21T20:06:12.532492" elapsed="0.605127"/>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-07T20:31:15.358887" level="INFO">${orderNo} = None</msg>
+<var>${orderNo}</var>
+<arg>${resp.content}</arg>
+<arg>.//OrderReleaseList/OrderRelease[@OrderReleaseKey]</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.358086" elapsed="0.000833"/>
 </kw>
-<tag>CREATEORDER</tag>
-<tag>HAPPYFLOW</tag>
-<tag>REGRESSION</tag>
-<status status="PASS" start="2025-02-21T20:06:06.223612" elapsed="6.914561"/>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'***********************************************8'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.359413" elapsed="0.000521"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orderNo}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.360327" elapsed="0.000551"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'response content block------------------------'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.361359" elapsed="0.000485"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${resp.content}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.362435" elapsed="0.001530"/>
+</kw>
+<kw name="Parse Xml" owner="XML">
+<arg>${resp.content}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.364592" elapsed="0.001245"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'parsed content'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.366208" elapsed="0.000429"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${resp}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.367045" elapsed="0.000407"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'type------------------------------------------'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.367824" elapsed="0.000378"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Content-Type: ${resp}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.368580" elapsed="0.000406"/>
+</kw>
+<kw name="Parse Xml" owner="XML">
+<arg>${resp.content}</arg>
+<doc>Parses the given XML file or string into an element structure.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.369368" elapsed="0.000696"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-07T20:31:15.371380" level="INFO">${orderReleaseList} = &lt;Element 'OrderReleaseList' at 0x000001B61E7D30B0&gt;</msg>
+<var>${orderReleaseList}</var>
+<arg>${resp.content}</arg>
+<arg>.//OrderReleaseList</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.370582" elapsed="0.000832"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-07T20:31:15.372865" level="INFO">${orderAttr} = &lt;Element 'OrderRelease' at 0x000001B61E7D3150&gt;</msg>
+<var>${orderAttr}</var>
+<arg>${resp.content}</arg>
+<arg>.//OrderReleaseList/OrderRelease</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.371791" elapsed="0.001111"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-07T20:31:15.373753" level="INFO">${orderReleaseKey} = 20250307074319347707</msg>
+<var>${orderReleaseKey}</var>
+<arg>${orderAttr}</arg>
+<arg>OrderReleaseKey</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.373532" elapsed="0.000253"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'orderReleaseKey'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.374142" elapsed="0.000237"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orderReleaseKey}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.374593" elapsed="0.000281"/>
+</kw>
+<kw name="Get Element Attributes" owner="XML">
+<msg time="2025-03-07T20:31:15.375401" level="INFO">${data_attrs} = {'CarrierServiceCode': 'STD', 'DocumentType': '0001', 'EnterpriseCode': 'CCULTA', 'OrderReleaseKey': '20250307074319347707', 'SCAC': '02', 'ShipNode': '0888'}</msg>
+<var>${data_attrs}</var>
+<arg>${orderAttr}</arg>
+<doc>Returns all attributes of the specified element.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.375143" elapsed="0.000291"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'inside for loop'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.375980" elapsed="0.000163"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${attr_name}</arg>
+<arg>${attr_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.376240" elapsed="0.000183"/>
+</kw>
+<var name="${attr_name}">CarrierServiceCode</var>
+<var name="${attr_value}">STD</var>
+<status status="PASS" start="2025-03-07T20:31:15.375837" elapsed="0.000621"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'inside for loop'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.376631" elapsed="0.000199"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${attr_name}</arg>
+<arg>${attr_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.377022" elapsed="0.000386"/>
+</kw>
+<var name="${attr_name}">DocumentType</var>
+<var name="${attr_value}">0001</var>
+<status status="PASS" start="2025-03-07T20:31:15.376559" elapsed="0.000905"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'inside for loop'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.377725" elapsed="0.000221"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${attr_name}</arg>
+<arg>${attr_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.378073" elapsed="0.000308"/>
+</kw>
+<var name="${attr_name}">EnterpriseCode</var>
+<var name="${attr_value}">CCULTA</var>
+<status status="PASS" start="2025-03-07T20:31:15.377594" elapsed="0.000822"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'inside for loop'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.378584" elapsed="0.000150"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${attr_name}</arg>
+<arg>${attr_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.378822" elapsed="0.000193"/>
+</kw>
+<var name="${attr_name}">OrderReleaseKey</var>
+<var name="${attr_value}">20250307074319347707</var>
+<status status="PASS" start="2025-03-07T20:31:15.378512" elapsed="0.000535"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'inside for loop'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.379199" elapsed="0.000135"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${attr_name}</arg>
+<arg>${attr_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.379419" elapsed="0.000175"/>
+</kw>
+<var name="${attr_name}">SCAC</var>
+<var name="${attr_value}">02</var>
+<status status="PASS" start="2025-03-07T20:31:15.379132" elapsed="0.000496"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'inside for loop'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.379920" elapsed="0.000159"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${attr_name}</arg>
+<arg>${attr_value}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.380172" elapsed="0.000172"/>
+</kw>
+<var name="${attr_name}">ShipNode</var>
+<var name="${attr_value}">0888</var>
+<status status="PASS" start="2025-03-07T20:31:15.379841" elapsed="0.000539"/>
+</iter>
+<var>${attr_name}</var>
+<var>${attr_value}</var>
+<value>&amp;{data_attrs}</value>
+<status status="PASS" start="2025-03-07T20:31:15.375632" elapsed="0.004776"/>
+</for>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orderAttr}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.380560" elapsed="0.000155"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${orderReleaseList}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-07T20:31:15.380847" elapsed="0.000204"/>
+</kw>
+<status status="PASS" start="2025-03-07T20:31:12.390649" elapsed="2.990669"/>
 </test>
-<status status="PASS" start="2025-02-21T20:06:04.471492" elapsed="8.667483"/>
+<status status="PASS" start="2025-03-07T20:31:11.272270" elapsed="4.109605"/>
 </suite>
-<status status="PASS" start="2025-02-21T20:06:04.469611" elapsed="8.670240"/>
+<status status="PASS" start="2025-03-07T20:31:11.270274" elapsed="4.112463"/>
 </suite>
-<status status="PASS" start="2025-02-21T20:06:04.467724" elapsed="8.672897"/>
+<status status="PASS" start="2025-03-07T20:31:11.268464" elapsed="4.114795"/>
 </suite>
-<status status="PASS" start="2025-02-21T20:06:04.465607" elapsed="8.675575"/>
+<status status="PASS" start="2025-03-07T20:31:11.267036" elapsed="4.117055"/>
 </suite>
-<status status="PASS" start="2025-02-21T20:06:04.398023" elapsed="8.743925"/>
+<status status="PASS" start="2025-03-07T20:31:11.224963" elapsed="4.159800"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">CREATEORDER</stat>
-<stat pass="1" fail="0" skip="0">HAPPYFLOW</stat>
-<stat pass="1" fail="0" skip="0">REGRESSION</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Suite1">Suite1</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase1">Suite1.TestCase1</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="CreateOrder">Suite1.TestCase1.CreateOrder</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test">Suite1.TestCase1.CreateOrder.Test</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TC 001">Suite1.TestCase1.CreateOrder.Test.TC 001</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Atest">Atest</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TestCase1">Atest.TestCase1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="CreateOrder">Atest.TestCase1.CreateOrder</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Test">Atest.TestCase1.CreateOrder.Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1-s1" name="TC 001">Atest.TestCase1.CreateOrder.Test.TC 001</stat>
 </suite>
 </statistics>
 <errors>

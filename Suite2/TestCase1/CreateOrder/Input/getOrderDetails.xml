@@ -1,0 +1,10 @@
+<MultiApi>
+	<API Name="getOrderDetails">
+		<Input>
+			<Order DocumentType="0001" EnterpriseCode="Liverpool" OrderHeaderKey="$OrderHeaderKey" OrderNo="$OrderNo"></Order>
+		</Input>
+<Template>
+<Order AllocationRuleID="FWD_RULES" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerPONo="o13556164996" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="Y" EnterpriseCode="Liverpool" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1000" MaxOrderStatusDesc="Draft Order Created" MinOrderStatus="1000" MinOrderStatusDesc="Draft Order Created" NotifyAfterShipmentFlag="N"/>
+</Template>
+	</API>
+</MultiApi>

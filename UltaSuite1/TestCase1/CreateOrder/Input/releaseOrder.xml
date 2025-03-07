@@ -1,0 +1,10 @@
+<!-- ExecuteType:SterlingApi -->
+<!-- ExecuteMethod:multiApi -->
+<!--TestDesc:  -->
+<MultiApi>
+	<API Name="triggerAgent">
+		<Input>
+			<TriggerAgent CriteriaId="ULTA_RELEASE.0001" />
+		</Input>
+	</API>
+</MultiApi>

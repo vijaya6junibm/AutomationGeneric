@@ -13,6 +13,7 @@ Resource     createSession.robot
 
 *** Variables ***
 ${base_url_api}         http://9.30.26.220:9080/smcfs/restapi/invoke/
+${base_url_api1}         http://9.30.252.13:9080/smcfs/restapi/invoke/
 ${base_url_flow}         http://9.30.26.220:9080/smcfs/restapi/executeFlow/
 ${user}             admin
 ${passwd}           password
@@ -23,6 +24,10 @@ ${file1}           TestResults1.csv
 ${createOrder}             createOrder
 ${manageItem}             manageItem
 ${adjustInventory}             adjustInventory
+${multiApi}             multiApi
+${base_url}    http://9.30.252.13:9080
+${req_uri}      /smcfs/interop/InteropHttpServlet
+
 
 
 

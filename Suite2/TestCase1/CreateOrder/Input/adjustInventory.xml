@@ -1,0 +1,9 @@
+<MultiApi>
+	<API Name="adjustInventory">
+		<Input>
+			<Items>
+	<Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="12439482" OrganizationCode="EPL" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="0001" SupplyType="ONHAND" UnitOfMeasure="PI"/>
+</Items>
+		</Input>
+	</API>
+</MultiApi>

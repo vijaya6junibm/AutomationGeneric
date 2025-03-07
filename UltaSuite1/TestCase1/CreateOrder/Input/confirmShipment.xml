@@ -1,0 +1,14 @@
+<!-- ExecuteType:SterlingApi -->
+<!-- ExecuteMethod:multiApi -->
+<!--TestDesc:  -->
+<MultiApi>
+	<API FlowName="UltaConfirmShipment">
+		<Input>
+			<Shipment SCAC="${SCAC}" CarrierServiceCode="${CarrierServiceCode}" TrackingNo="${OrderNo}" ActualShipmentDate="2020-09-29T16:10:00" DocumentType="${DocumentType}" EnterpriseCode="${EnterpriseCode}" OrderNo="${OrderNo}" ShipNode="${ShipNode}" ShipmentNo="${OrderNo}">
+			  <ShipmentLines>
+				<ShipmentLine Quantity="${OrderedQty}" OrderReleaseKey="${OrderReleaseKey}" OrderLineKey="${OrderLineKey}" />
+			  </ShipmentLines>
+			</Shipment>
+		</Input>
+	</API>
+</MultiApi>

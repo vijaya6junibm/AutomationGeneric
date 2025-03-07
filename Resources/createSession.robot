@@ -18,4 +18,16 @@ Creating Session Generic
     ${auth}=  Create List  ${user}  ${passwd}
     Create Session  ${AddData}  url=${base_url_api}${name}  headers=${headers}  auth=${auth}
 
+Creating Session ULTA
+    [Arguments]     ${AddData}    ${name}
+    ${auth}=  Create List  ${user}  ${passwd}
+    Create Session  ${AddData}  url=${base_url_api1}${name}  headers=${headers}  auth=${auth}
+ 
+Creating Session Sample1
+    [Arguments]     ${AddData}      ${xmlRequest}
+    Create Session    ${AddData}    ${BASE_URL}
+    ${params}   create dictionary   YFSEnvironment.progId=Test      InteropApiName=multiApi     ApiName=MultiApi        YFSEnvironment.userId=admin     YFSEnvironment.password=password       InteropApiData=${xmlRequest}       timeout=30
+    ${resp}=       POST On Session    ${AddData}    ${req_uri}  params=${params}
+    RETURN    ${resp}
+
     
