@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-03-09T23:22:36.872886" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 001" source="C:\automation\AutomationGeneric\UltaSuite1\TestCase1\CreateOrder\test\TC_001.robot">
+<test id="s1-t1" name="Create Order TC_001" line="13">
+<kw name="Create Order" owner="setUpForCreateOrder">
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:37.582079" level="INFO">${createOrderReq} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API FlowName="UltaCreateOrder"&gt;
+		&lt;Input&gt;
+			&lt;Order xmlns:tns="http://tns.tibco.com/bw/json/16800171152...</msg>
+<var>${createOrderReq}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${createOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:22:37.581739" elapsed="0.000375"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:37.582582" level="INFO">Creating Session using : alias=createOrder, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:37.582483" elapsed="0.000235"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:37.583013" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;!-- ExecuteType:Ster...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:37.582813" elapsed="0.000217"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:40.848908" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:22:40.849320" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000hJOsM_HvIVNIRvN9PS-9mKj:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:52:40 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name=""&gt;&lt;Output&gt;&lt;Order DocumentType="0001" EnterpriseCode="CCULTA" OrderHeaderKey="20250309175240359363" OrderNo="T100002490"/&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:40.849474" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:37.583118" elapsed="3.266376"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:22:40.849564" elapsed="0.000045"/>
+</return>
+<msg time="2025-03-09T23:22:40.849725" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${createOrder_Input_file_Name}</arg>
+<arg>${createOrderReq}</arg>
+<status status="PASS" start="2025-03-09T23:22:37.582267" elapsed="3.267475"/>
+</kw>
+<return>
+<value>${createOrderResp}</value>
+<status status="PASS" start="2025-03-09T23:22:40.849790" elapsed="0.000019"/>
+</return>
+<msg time="2025-03-09T23:22:40.849884" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${CUR_DIR}</arg>
+<status status="PASS" start="2025-03-09T23:22:37.581133" elapsed="3.268766"/>
+</kw>
+<kw name="Fetch Order No" owner="setUpForCreateOrder">
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:22:40.851928" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F79E7F0&gt;</msg>
+<var>${order}</var>
+<arg>${createOrderResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:22:40.850933" elapsed="0.001029"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:22:40.852381" level="INFO">${OrderNo} = T100002490</msg>
+<var>${OrderNo}</var>
+<arg>${order}</arg>
+<arg>OrderNo</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:22:40.852153" elapsed="0.000256"/>
+</kw>
+<return>
+<value>${OrderNo}</value>
+<status status="PASS" start="2025-03-09T23:22:40.852483" elapsed="0.000040"/>
+</return>
+<msg time="2025-03-09T23:22:40.852660" level="INFO">${OrderNo} = T100002490</msg>
+<var>${OrderNo}</var>
+<arg>${createOrderResp}</arg>
+<status status="PASS" start="2025-03-09T23:22:40.850466" elapsed="0.002221"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<kw name="Generic Input File Ord" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:40.854175" level="INFO">${getOrderDetailsxmlRequest} = &lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002490" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus=""...</msg>
+<var>${getOrderDetailsxmlRequest}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${getOrderDetails_Input_file_Name}</arg>
+<arg>${OrderNo}</arg>
+<status status="PASS" start="2025-03-09T23:22:40.853640" elapsed="0.000564"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:40.854758" level="INFO">Creating Session using : alias=&lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002490" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus="" Status=""&gt;
+				&lt;OrderLines&gt;
+					&lt;OrderLine OrderLineKey="" OrderedQty=""/&gt;
+				&lt;/OrderLines&gt;
+			&lt;/Order&gt;
+		&lt;/Template&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt;, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:40.854639" elapsed="0.000275"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:40.855285" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;MultiApi&gt;\n\t&lt;API Na...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:40.855041" elapsed="0.000268"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:43.536916" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002490%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002490%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:22:43.537052" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002490%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000sjIg-3dhQSLXVrtR5TdVy5c:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:52:43 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name="getOrderDetails"&gt;&lt;Output&gt;&lt;Order MaxOrderStatus="1100" OrderHeaderKey="20250309175240359363" Status="Created"&gt;&lt;OrderLines&gt;&lt;OrderLine OrderLineKey="20250309175240359364" OrderedQty="3"/&gt;&lt;/OrderLines&gt;&lt;/Order&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:43.537211" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:40.855438" elapsed="2.681802"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:22:43.537339" elapsed="0.000049"/>
+</return>
+<msg time="2025-03-09T23:22:43.537550" level="INFO">${getOrderDetailResp} = &lt;Response [200]&gt;</msg>
+<var>${getOrderDetailResp}</var>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<status status="PASS" start="2025-03-09T23:22:40.854349" elapsed="2.683227"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:22:43.538707" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F79EE30&gt;</msg>
+<var>${order}</var>
+<arg>${getOrderDetailResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:22:43.537766" elapsed="0.000980"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:22:43.539099" level="INFO">${Status} = Created</msg>
+<var>${Status}</var>
+<arg>${order}</arg>
+<arg>Status</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:22:43.538918" elapsed="0.000208"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${Status}</arg>
+<arg>${status_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-03-09T23:22:43.539269" elapsed="0.000205"/>
+</kw>
+<return>
+<value>${getOrderDetailResp}</value>
+<status status="PASS" start="2025-03-09T23:22:43.539533" elapsed="0.000036"/>
+</return>
+<arg>${CUR_DIR}</arg>
+<arg>Created</arg>
+<arg>${OrderNo}</arg>
+<status status="PASS" start="2025-03-09T23:22:40.853241" elapsed="2.686439"/>
+</kw>
+<tag>CREATEORDER</tag>
+<tag>HAPPYFLOW</tag>
+<tag>REGRESSION</tag>
+<tag>skip</tag>
+<tag>ULTA</tag>
+<status status="PASS" start="2025-03-09T23:22:37.580294" elapsed="5.959720"/>
+</test>
+<test id="s1-t2" name="Schedule Order TC_001" line="19">
+<kw name="Create Order" owner="setUpForCreateOrder">
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:43.541669" level="INFO">${createOrderReq} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API FlowName="UltaCreateOrder"&gt;
+		&lt;Input&gt;
+			&lt;Order xmlns:tns="http://tns.tibco.com/bw/json/16800171152...</msg>
+<var>${createOrderReq}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${createOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:22:43.541266" elapsed="0.000427"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:43.542085" level="INFO">Creating Session using : alias=createOrder, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:43.542000" elapsed="0.000185"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:43.542453" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;!-- ExecuteType:Ster...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:43.542268" elapsed="0.000202"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:46.497079" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:22:46.497551" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000RFZdeZ6THOXI2MZeEG_-qmQ:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:52:46 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name=""&gt;&lt;Output&gt;&lt;Order DocumentType="0001" EnterpriseCode="CCULTA" OrderHeaderKey="20250309175246359380" OrderNo="T100002491"/&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:46.497854" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:43.542551" elapsed="2.955348"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:22:46.498028" elapsed="0.000065"/>
+</return>
+<msg time="2025-03-09T23:22:46.498319" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${createOrder_Input_file_Name}</arg>
+<arg>${createOrderReq}</arg>
+<status status="PASS" start="2025-03-09T23:22:43.541806" elapsed="2.956554"/>
+</kw>
+<return>
+<value>${createOrderResp}</value>
+<status status="PASS" start="2025-03-09T23:22:46.498442" elapsed="0.000044"/>
+</return>
+<msg time="2025-03-09T23:22:46.498698" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${CUR_DIR}</arg>
+<status status="PASS" start="2025-03-09T23:22:43.541053" elapsed="2.957689"/>
+</kw>
+<kw name="Fetch Order No" owner="setUpForCreateOrder">
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:22:46.501893" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F79F420&gt;</msg>
+<var>${order}</var>
+<arg>${createOrderResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:22:46.500360" elapsed="0.001592"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:22:46.502570" level="INFO">${OrderNo} = T100002491</msg>
+<var>${OrderNo}</var>
+<arg>${order}</arg>
+<arg>OrderNo</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:22:46.502217" elapsed="0.000413"/>
+</kw>
+<return>
+<value>${OrderNo}</value>
+<status status="PASS" start="2025-03-09T23:22:46.502751" elapsed="0.000072"/>
+</return>
+<msg time="2025-03-09T23:22:46.503088" level="INFO">${OrderNo} = T100002491</msg>
+<var>${OrderNo}</var>
+<arg>${createOrderResp}</arg>
+<status status="PASS" start="2025-03-09T23:22:46.499562" elapsed="0.003569"/>
+</kw>
+<kw name="Manage MultiApi Ulta" owner="setUpForCreateOrder">
+<kw name="Creating Session ULTA" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-09T23:22:46.505296" level="INFO">${auth} = ['admin', 'password']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-09T23:22:46.505042" elapsed="0.000299"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:46.506043" level="INFO">Creating Session using : alias=scheduleOrder, url=http://9.30.252.13:9080/smcfs/restapi/invoke/scheduleOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002474F7434D0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api1}${name}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:46.505528" elapsed="0.000742"/>
+</kw>
+<arg>${input_file_Name1}</arg>
+<arg>${input_file_Name1}</arg>
+<status status="PASS" start="2025-03-09T23:22:46.504589" elapsed="0.001787"/>
+</kw>
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:46.507205" level="INFO">${Json} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Input&gt;
+			&lt;TriggerAgent CriteriaId="ULTA_SCHEDULE.0001" /&gt;
+		&lt;/Input&gt;
+	&lt;/AP...</msg>
+<var>${Json}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${input_file_Name1}</arg>
+<status status="PASS" start="2025-03-09T23:22:46.506544" elapsed="0.000717"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:47.326550" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/restapi/invoke/multiApi 
+ path_url=/smcfs/restapi/invoke/multiApi 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '214'} 
+ body=&lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Input&gt;
+			&lt;TriggerAgent CriteriaId="ULTA_SCHEDULE.0001" /&gt;
+		&lt;/Input&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:47.326782" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/restapi/invoke/multiApi 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '61', 'Date': 'Sun, 09 Mar 2025 17:52:47 GMT'} 
+ body={"API":{"Output":{},"Name":"triggerAgent"}} 
+ </msg>
+<msg time="2025-03-09T23:22:47.327033" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${input_file_Name1}</arg>
+<arg>${base_url_api1}${multiApi}</arg>
+<arg>data=${Json}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:46.507474" elapsed="0.819611"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-09T23:22:47.327455" elapsed="0.000620"/>
+</kw>
+<kw name="Convert Json To Xml" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:47.332537" level="INFO">${response1} = &lt;?xml version="1.0" ?&gt;
+&lt;Root&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Output/&gt;
+	&lt;/API&gt;
+&lt;/Root&gt;
+</msg>
+<var>${response1}</var>
+<arg>${response.json()}</arg>
+<doc>Convert JSON string to XML format.</doc>
+<status status="PASS" start="2025-03-09T23:22:47.328480" elapsed="0.004104"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-03-09T23:22:47.332665" elapsed="0.000042"/>
+</return>
+<msg time="2025-03-09T23:22:47.332867" level="INFO">${resp2} = &lt;Response [200]&gt;</msg>
+<var>${resp2}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${scheduleOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:22:46.504011" elapsed="0.828885"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<kw name="Generic Input File Ord" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:47.334341" level="INFO">${getOrderDetailsxmlRequest} = &lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002491" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus=""...</msg>
+<var>${getOrderDetailsxmlRequest}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${getOrderDetails_Input_file_Name}</arg>
+<arg>${OrderNo}</arg>
+<status status="PASS" start="2025-03-09T23:22:47.333743" elapsed="0.000639"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:47.335064" level="INFO">Creating Session using : alias=&lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002491" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus="" Status=""&gt;
+				&lt;OrderLines&gt;
+					&lt;OrderLine OrderLineKey="" OrderedQty=""/&gt;
+				&lt;/OrderLines&gt;
+			&lt;/Order&gt;
+		&lt;/Template&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt;, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:47.334946" elapsed="0.000683"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:47.335985" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;MultiApi&gt;\n\t&lt;API Na...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:47.335755" elapsed="0.000252"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:50.194710" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002491%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002491%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:22:50.195061" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002491%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000QE0RuzooopET9sB0s94sxVj:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:52:50 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name="getOrderDetails"&gt;&lt;Output&gt;&lt;Order MaxOrderStatus="1100" OrderHeaderKey="20250309175246359380" Status="Created"&gt;&lt;OrderLines&gt;&lt;OrderLine OrderLineKey="20250309175246359381" OrderedQty="3"/&gt;&lt;/OrderLines&gt;&lt;/Order&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:50.195361" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:47.336114" elapsed="2.859303"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:22:50.195584" elapsed="0.000059"/>
+</return>
+<msg time="2025-03-09T23:22:50.195865" level="INFO">${getOrderDetailResp} = &lt;Response [200]&gt;</msg>
+<var>${getOrderDetailResp}</var>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<status status="PASS" start="2025-03-09T23:22:47.334597" elapsed="2.861309"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:22:50.197089" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F7D2B60&gt;</msg>
+<var>${order}</var>
+<arg>${getOrderDetailResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:22:50.196155" elapsed="0.000965"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:22:50.197425" level="INFO">${Status} = Created</msg>
+<var>${Status}</var>
+<arg>${order}</arg>
+<arg>Status</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:22:50.197269" elapsed="0.000179"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-03-09T23:22:50.197790" level="FAIL">Created != Scheduled</msg>
+<arg>${Status}</arg>
+<arg>${status_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-03-09T23:22:50.197560" elapsed="0.000377">Created != Scheduled</status>
+</kw>
+<return>
+<value>${getOrderDetailResp}</value>
+<status status="NOT RUN" start="2025-03-09T23:22:50.198001" elapsed="0.000018"/>
+</return>
+<arg>${CUR_DIR}</arg>
+<arg>Scheduled</arg>
+<arg>${OrderNo}</arg>
+<status status="FAIL" start="2025-03-09T23:22:47.333328" elapsed="2.864793">Created != Scheduled</status>
+</kw>
+<tag>HAPPYFLOW</tag>
+<tag>REGRESSION</tag>
+<tag>SCHEDULEORDER</tag>
+<tag>skip</tag>
+<tag>ULTA</tag>
+<status status="FAIL" start="2025-03-09T23:22:43.540517" elapsed="6.657932">Created != Scheduled</status>
+</test>
+<test id="s1-t3" name="Release Order TC_001" line="26">
+<kw name="Create Order" owner="setUpForCreateOrder">
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:50.200123" level="INFO">${createOrderReq} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API FlowName="UltaCreateOrder"&gt;
+		&lt;Input&gt;
+			&lt;Order xmlns:tns="http://tns.tibco.com/bw/json/16800171152...</msg>
+<var>${createOrderReq}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${createOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:22:50.199757" elapsed="0.000397"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:50.200735" level="INFO">Creating Session using : alias=createOrder, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:50.200602" elapsed="0.000280"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:50.201254" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;!-- ExecuteType:Ster...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:50.201000" elapsed="0.000292"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:53.467810" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:22:53.468115" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000XG4g07V-h4HAplsOSTFvqoz:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:52:53 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name=""&gt;&lt;Output&gt;&lt;Order DocumentType="0001" EnterpriseCode="CCULTA" OrderHeaderKey="20250309175253359397" OrderNo="T100002492"/&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:53.468304" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:50.201388" elapsed="3.266944"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:22:53.468415" elapsed="0.000034"/>
+</return>
+<msg time="2025-03-09T23:22:53.468554" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${createOrder_Input_file_Name}</arg>
+<arg>${createOrderReq}</arg>
+<status status="PASS" start="2025-03-09T23:22:50.200307" elapsed="3.268261"/>
+</kw>
+<return>
+<value>${createOrderResp}</value>
+<status status="PASS" start="2025-03-09T23:22:53.468601" elapsed="0.000014"/>
+</return>
+<msg time="2025-03-09T23:22:53.468683" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${CUR_DIR}</arg>
+<status status="PASS" start="2025-03-09T23:22:50.199560" elapsed="3.269137"/>
+</kw>
+<kw name="Fetch Order No" owner="setUpForCreateOrder">
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:22:53.470311" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F7F8400&gt;</msg>
+<var>${order}</var>
+<arg>${createOrderResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:22:53.469424" elapsed="0.000931"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:22:53.470744" level="INFO">${OrderNo} = T100002492</msg>
+<var>${OrderNo}</var>
+<arg>${order}</arg>
+<arg>OrderNo</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:22:53.470545" elapsed="0.000228"/>
+</kw>
+<return>
+<value>${OrderNo}</value>
+<status status="PASS" start="2025-03-09T23:22:53.470843" elapsed="0.000041"/>
+</return>
+<msg time="2025-03-09T23:22:53.471031" level="INFO">${OrderNo} = T100002492</msg>
+<var>${OrderNo}</var>
+<arg>${createOrderResp}</arg>
+<status status="PASS" start="2025-03-09T23:22:53.469031" elapsed="0.002027"/>
+</kw>
+<kw name="Manage MultiApi Ulta" owner="setUpForCreateOrder">
+<kw name="Creating Session ULTA" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-09T23:22:53.472013" level="INFO">${auth} = ['admin', 'password']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-09T23:22:53.471912" elapsed="0.000117"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:53.472297" level="INFO">Creating Session using : alias=scheduleOrder, url=http://9.30.252.13:9080/smcfs/restapi/invoke/scheduleOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002474F6A79D0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api1}${name}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:53.472104" elapsed="0.000287"/>
+</kw>
+<arg>${input_file_Name1}</arg>
+<arg>${input_file_Name1}</arg>
+<status status="PASS" start="2025-03-09T23:22:53.471724" elapsed="0.000707"/>
+</kw>
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:53.472922" level="INFO">${Json} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Input&gt;
+			&lt;TriggerAgent CriteriaId="ULTA_SCHEDULE.0001" /&gt;
+		&lt;/Input&gt;
+	&lt;/AP...</msg>
+<var>${Json}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${input_file_Name1}</arg>
+<status status="PASS" start="2025-03-09T23:22:53.472496" elapsed="0.000446"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:54.560159" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/restapi/invoke/multiApi 
+ path_url=/smcfs/restapi/invoke/multiApi 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '214'} 
+ body=&lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Input&gt;
+			&lt;TriggerAgent CriteriaId="ULTA_SCHEDULE.0001" /&gt;
+		&lt;/Input&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:54.560230" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/restapi/invoke/multiApi 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '61', 'Date': 'Sun, 09 Mar 2025 17:52:54 GMT'} 
+ body={"API":{"Output":{},"Name":"triggerAgent"}} 
+ </msg>
+<msg time="2025-03-09T23:22:54.560313" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${input_file_Name1}</arg>
+<arg>${base_url_api1}${multiApi}</arg>
+<arg>data=${Json}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:53.473036" elapsed="1.087294"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-09T23:22:54.560469" elapsed="0.000205"/>
+</kw>
+<kw name="Convert Json To Xml" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:54.561337" level="INFO">${response1} = &lt;?xml version="1.0" ?&gt;
+&lt;Root&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Output/&gt;
+	&lt;/API&gt;
+&lt;/Root&gt;
+</msg>
+<var>${response1}</var>
+<arg>${response.json()}</arg>
+<doc>Convert JSON string to XML format.</doc>
+<status status="PASS" start="2025-03-09T23:22:54.560787" elapsed="0.000570"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-03-09T23:22:54.561397" elapsed="0.000025"/>
+</return>
+<arg>${CUR_DIR}</arg>
+<arg>${scheduleOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:22:53.471489" elapsed="1.090000"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<kw name="Generic Input File Ord" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:54.563354" level="INFO">${getOrderDetailsxmlRequest} = &lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002492" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus=""...</msg>
+<var>${getOrderDetailsxmlRequest}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${getOrderDetails_Input_file_Name}</arg>
+<arg>${OrderNo}</arg>
+<status status="PASS" start="2025-03-09T23:22:54.562204" elapsed="0.001184"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:54.564438" level="INFO">Creating Session using : alias=&lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002492" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus="" Status=""&gt;
+				&lt;OrderLines&gt;
+					&lt;OrderLine OrderLineKey="" OrderedQty=""/&gt;
+				&lt;/OrderLines&gt;
+			&lt;/Order&gt;
+		&lt;/Template&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt;, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:54.564034" elapsed="0.000809"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:54.566108" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;MultiApi&gt;\n\t&lt;API Na...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:54.565306" elapsed="0.000883"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:57.459229" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002492%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002492%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:22:57.459727" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002492%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=00002it3HnoFjExG_vpOdDpIBHN:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:52:57 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name="getOrderDetails"&gt;&lt;Output&gt;&lt;Order MaxOrderStatus="1100" OrderHeaderKey="20250309175253359397" Status="Created"&gt;&lt;OrderLines&gt;&lt;OrderLine OrderLineKey="20250309175253359398" OrderedQty="3"/&gt;&lt;/OrderLines&gt;&lt;/Order&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:22:57.460137" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:54.566637" elapsed="2.893585"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:22:57.460460" elapsed="0.000111"/>
+</return>
+<msg time="2025-03-09T23:22:57.460999" level="INFO">${getOrderDetailResp} = &lt;Response [200]&gt;</msg>
+<var>${getOrderDetailResp}</var>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<status status="PASS" start="2025-03-09T23:22:54.563566" elapsed="2.897515"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:22:57.464082" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F7F8F90&gt;</msg>
+<var>${order}</var>
+<arg>${getOrderDetailResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:22:57.461541" elapsed="0.002635"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:22:57.465100" level="INFO">${Status} = Created</msg>
+<var>${Status}</var>
+<arg>${order}</arg>
+<arg>Status</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:22:57.464632" elapsed="0.000535"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-03-09T23:22:57.466098" level="FAIL">Created != Scheduled</msg>
+<arg>${Status}</arg>
+<arg>${status_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-03-09T23:22:57.465516" elapsed="0.000818">Created != Scheduled</status>
+</kw>
+<return>
+<value>${getOrderDetailResp}</value>
+<status status="NOT RUN" start="2025-03-09T23:22:57.466524" elapsed="0.000044"/>
+</return>
+<arg>${CUR_DIR}</arg>
+<arg>Scheduled</arg>
+<arg>${OrderNo}</arg>
+<status status="FAIL" start="2025-03-09T23:22:54.561798" elapsed="2.905058">Created != Scheduled</status>
+</kw>
+<kw name="Manage MultiApi Ulta" owner="setUpForCreateOrder">
+<arg>${CUR_DIR}</arg>
+<arg>${releaseOrder_Input_file_Name}</arg>
+<status status="NOT RUN" start="2025-03-09T23:22:57.468846" elapsed="0.000074"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<arg>${CUR_DIR}</arg>
+<arg>Released</arg>
+<arg>${OrderNo}</arg>
+<status status="NOT RUN" start="2025-03-09T23:22:57.469555" elapsed="0.000066"/>
+</kw>
+<tag>HAPPYFLOW</tag>
+<tag>REGRESSION</tag>
+<tag>RELEASEORDER</tag>
+<tag>skip</tag>
+<tag>ULTA</tag>
+<status status="FAIL" start="2025-03-09T23:22:50.199124" elapsed="7.271026">Created != Scheduled</status>
+</test>
+<test id="s1-t4" name="Confirm Shipment TC_001" line="35">
+<kw name="Create Order" owner="setUpForCreateOrder">
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:22:57.472959" level="INFO">${createOrderReq} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API FlowName="UltaCreateOrder"&gt;
+		&lt;Input&gt;
+			&lt;Order xmlns:tns="http://tns.tibco.com/bw/json/16800171152...</msg>
+<var>${createOrderReq}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${createOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:22:57.472282" elapsed="0.000727"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:22:57.474112" level="INFO">Creating Session using : alias=createOrder, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:22:57.473833" elapsed="0.000470"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:22:57.474901" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;!-- ExecuteType:Ster...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:22:57.474487" elapsed="0.000473"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:23:00.530764" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:23:00.531240" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3C%21--+ExecuteType%3ASterlingApi+--%3E%0A%3C%21--+ExecuteMethod%3AmultiApi+--%3E%0A%3C%21--TestDesc%3A++--%3E%0A%3CMultiApi%3E%0A%09%3CAPI+FlowName%3D%22UltaCreateOrder%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+xmlns%3Atns%3D%22http%3A%2F%2Ftns.tibco.com%2Fbw%2Fjson%2F1680017115271%22+xmlns%3Atns1%3D%22http%3A%2F%2Fwww.example.com%2Fnamespaces%2Ftns%2F1680017352441%22+xmlns%3Axsd%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22+xmlns%3Atib%3D%22http%3A%2F%2Fwww.tibco.com%2Fbw%2Fxslt%2Fcustom-functions%22+AuthorizedClient%3D%22ONL%22+ReqDeliveryDate%3D%222025-01-30T13%3A11%3A00.209%2B00%3A00%22+ExtnIsOrderBorderfree%3D%22N%22+DocumentType%3D%220001%22+BypassPricing%3D%22Y%22++ExtnIsPaymentPaypal%3D%22Y%22+OrderDate%3D%222024-12-23T13%3A11%3A00.441%2B00%3A00%22+ExtnIsOrderInternational%3D%22N%22+ExtnIsGiftWrap%3D%22N%22+EntryType%3D%22WEB%22+OrderType%3D%22REGULAR%22+ValidatePromotionAward%3D%22N%22+SellerOrganizationCode%3D%22CCULTA%22+PaymentRuleId%3D%22ULTA_PMT_RULE%22+EnterpriseCode%3D%22CCULTA%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+CarrierServiceCode%3D%22STD%22+DeliveryMethod%3D%22SHP%22+PrimeLineNo%3D%221%22+ExtnIsItemHazmat%3D%22N%22+SubLineNo%3D%221%22+SCAC%3D%2202%22+OrderedQty%3D%223.0%22+LineType%3D%22%22+FulfillmentType%3D%22SHIPTOHOME%22+ShipNode%3D%220888%22%3E%0A%09%09%09%09%09%3CItem+UnitOfMeasure%3D%22EACH%22+ItemDesc%3D%22Shea+Butter+Hand+Cream%22+ItemID%3D%222500553%22%2F%3E%0A%09%09%09%09%09%3CLinePriceInfo+IsPriceLocked%3D%22Y%22+ListPrice%3D%2210.0%22+UnitPrice%3D%2210.0%22+%2F%3E%0A%09%09%09%09%09%3CExtn+ExtnIsItemOnSale%3D%22N%22+ExtnATGUnitPriceJson%3D%22%7B%26quot%3BskuPriceDetail%26quot%3B%3A%7B%26quot%3BskuID%26quot%3B%3A%26quot%3B2241131%26quot%3B%2C%26quot%3BpriceDetails%26quot%3B%3A%5B%7B%26quot%3Bprice%26quot%3B%3A30.0%2C%26quot%3Bqty%26quot%3B%3A1%7D%5D%7D%7D%22+ExtnOverriddenDeliveryMethod%3D%22%22+ExtnHazmatStatus%3D%22N%22+ExtnATGLineItemID%3D%226f3063b4-0f4d-4aa7-a94c-c9662c2d71ef%22+%2F%3E%0A%09%09%09%09%3C%2FOrderLine%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%09%3CReferences%3E%0A%09%09%09%09%09%3CReference+Name%3D%22EmailOptIn%22+Value%3D%22N%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22CardType%22+Value%3D%22VISA%22+%2F%3E%0A%09%09%09%09%09%3CReference+Name%3D%22ChargeAmount%22+Value%3D%2250.00%22+%2F%3E%0A%09%09%09%09%3C%2FReferences%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22ECOMQA%22+ZipCode%3D%2262249%22+City%3D%22Highland%22+EMailID%3D%22ecomqaoffshore%40ulta.com%22+DayPhone%3D%224086331345%22+MobilePhone%3D%224086331345%22+AddressLine2%3D%22%22+AddressLine1%3D%22104+Autumn+Oaks+Lane%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22ECOMQA%22+%2F%3E%0A%09%09%09%09%3CPersonInfoShipTo+FirstName%3D%22ABCD%22+ZipCode%3D%2260440%22+City%3D%22bolingbrook%22+EMailID%3D%229107081%40ulta.com%22+MobilePhone%3D%229188888888%22+AddressLine1%3D%221000+remington+blvd%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22EFGH%22+%2F%3E%0A%09%09%09%09%3CPaymentMethods%3E%0A%09%09%09%09%09%3CPaymentMethod+MaxChargeLimit%3D%2250.00%22+FirstName%3D%22%22+CreditCardType%3D%22CBCC%22+CreditCardNo%3D%22222360%2A%2A%2A%2A%2A%2A0329%22+ChargeSequence%3D%220%22+DisplayCreditCardNo%3D%220329%22+CreditCardExpDate%3D%22202512%22+CreditCardName%3D%22CREDIT_CARD%22+PaymentType%3D%22CREDIT_CARD%22+LastName%3D%22%22%3E%0A%09%09%09%09%3CPaymentDetailsList%3E%0A%09%09%09%09%09%3CPaymentDetails+RequestAmount%3D%2250.00%22+AuthorizationID%3D%22607893%22+ProcessedAmount%3D%2250.00%22+ChargeType%3D%22AUTHORIZATION%22+%2F%3E%0A%09%09%09%09%3C%2FPaymentDetailsList%3E%0A%09%09%09%09%3CPersonInfoBillTo+FirstName%3D%22Archana%22+ZipCode%3D%2260440%22+City%3D%22BOLINGBROOK%22+EMailID%3D%22sharmaarc83%40gmail.com%22+MobilePhone%3D%228855568885%22+AddressLine2%3D%22%22+AddressLine1%3D%221000+REMINGTON+BLVD%22+State%3D%22IL%22+Country%3D%22US%22+LastName%3D%22Sharma%22+%2F%3E%0A%09%09%09%3C%2FPaymentMethod%3E%0A%09%09%09%09%3C%2FPaymentMethods%3E%0A%09%09%09%09%3CExtn+ExtnIsNonSTDShippingEligible%3D%22Y%22+ExtnOMSSettledOrder%3D%22Y%22+ExtnIsSignatureRequired%3D%22N%22+ExtnReleaseVersion%3D%22R2_2_5%22+ExtnIsGiftWrap%3D%22N%22+ExtnATGOrderTotal%3D%2230.00%22+ExtnDeliveryNotificationPreference%3D%22N%22+ExtnMemberStatus%3D%22%22+ExtnSplitUniqueId%3D%22SC202501159%22%3E%0A%09%09%09%09%09%3CExtnOrderWavingDataList%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE1%22+ExtnWavingAttrValue%3D%22W31%22+%2F%3E%0A%09%09%09%09%09%09%3CExtnOrderWavingData+ExtnWavingAttrName%3D%22TEST_WAVING_ATTRIBUTE2%22+ExtnWavingAttrValue%3D%22W41%22+%2F%3E%0A%09%09%09%09%09%3C%2FExtnOrderWavingDataList%3E%0A%09%09%09%09%3C%2FExtn%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FInput%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000Ra4ZLQHXQNeh5QZJkSik52A:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:53:00 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name=""&gt;&lt;Output&gt;&lt;Order DocumentType="0001" EnterpriseCode="CCULTA" OrderHeaderKey="20250309175300359414" OrderNo="T100002493"/&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:23:00.531582" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:22:57.475257" elapsed="3.056375"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:23:00.531770" elapsed="0.000068"/>
+</return>
+<msg time="2025-03-09T23:23:00.532089" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${createOrder_Input_file_Name}</arg>
+<arg>${createOrderReq}</arg>
+<status status="PASS" start="2025-03-09T23:22:57.473221" elapsed="3.058913"/>
+</kw>
+<return>
+<value>${createOrderResp}</value>
+<status status="PASS" start="2025-03-09T23:23:00.532228" elapsed="0.000047"/>
+</return>
+<msg time="2025-03-09T23:23:00.532485" level="INFO">${createOrderResp} = &lt;Response [200]&gt;</msg>
+<var>${createOrderResp}</var>
+<arg>${CUR_DIR}</arg>
+<status status="PASS" start="2025-03-09T23:22:57.471895" elapsed="3.060634"/>
+</kw>
+<kw name="Fetch Order No" owner="setUpForCreateOrder">
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:23:00.537060" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F7F97B0&gt;</msg>
+<var>${order}</var>
+<arg>${createOrderResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:23:00.534231" elapsed="0.002895"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:23:00.537755" level="INFO">${OrderNo} = T100002493</msg>
+<var>${OrderNo}</var>
+<arg>${order}</arg>
+<arg>OrderNo</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:23:00.537457" elapsed="0.000342"/>
+</kw>
+<return>
+<value>${OrderNo}</value>
+<status status="PASS" start="2025-03-09T23:23:00.537889" elapsed="0.000050"/>
+</return>
+<msg time="2025-03-09T23:23:00.538120" level="INFO">${OrderNo} = T100002493</msg>
+<var>${OrderNo}</var>
+<arg>${createOrderResp}</arg>
+<status status="PASS" start="2025-03-09T23:23:00.533279" elapsed="0.004875"/>
+</kw>
+<kw name="Fetch OrderHeaderKey" owner="setUpForCreateOrder">
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:23:00.539733" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F7F90D0&gt;</msg>
+<var>${order}</var>
+<arg>${createOrderResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:23:00.539006" elapsed="0.000758"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:23:00.540082" level="INFO">${OrderHeaderKey} = 20250309175300359414</msg>
+<var>${OrderHeaderKey}</var>
+<arg>${order}</arg>
+<arg>OrderHeaderKey</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:23:00.539909" elapsed="0.000199"/>
+</kw>
+<return>
+<value>${OrderHeaderKey}</value>
+<status status="PASS" start="2025-03-09T23:23:00.540165" elapsed="0.000033"/>
+</return>
+<msg time="2025-03-09T23:23:00.540329" level="INFO">${OrderHeaderKey} = 20250309175300359414</msg>
+<var>${OrderHeaderKey}</var>
+<arg>${createOrderResp}</arg>
+<status status="PASS" start="2025-03-09T23:23:00.538681" elapsed="0.001673"/>
+</kw>
+<kw name="Manage MultiApi Ulta" owner="setUpForCreateOrder">
+<kw name="Creating Session ULTA" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-03-09T23:23:00.541520" level="INFO">${auth} = ['admin', 'password']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-03-09T23:23:00.541342" elapsed="0.000208"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:23:00.541922" level="INFO">Creating Session using : alias=scheduleOrder, url=http://9.30.252.13:9080/smcfs/restapi/invoke/scheduleOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002474F6A74D0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api1}${name}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:23:00.541685" elapsed="0.000352"/>
+</kw>
+<arg>${input_file_Name1}</arg>
+<arg>${input_file_Name1}</arg>
+<status status="PASS" start="2025-03-09T23:23:00.541025" elapsed="0.001065"/>
+</kw>
+<kw name="Generic Input File" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:23:00.542573" level="INFO">${Json} = &lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Input&gt;
+			&lt;TriggerAgent CriteriaId="ULTA_SCHEDULE.0001" /&gt;
+		&lt;/Input&gt;
+	&lt;/AP...</msg>
+<var>${Json}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${input_file_Name1}</arg>
+<status status="PASS" start="2025-03-09T23:23:00.542175" elapsed="0.000432"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:23:01.350436" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/restapi/invoke/multiApi 
+ path_url=/smcfs/restapi/invoke/multiApi 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ=', 'Content-Length': '214'} 
+ body=&lt;!-- ExecuteType:SterlingApi --&gt;
+&lt;!-- ExecuteMethod:multiApi --&gt;
+&lt;!--TestDesc:  --&gt;
+&lt;MultiApi&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Input&gt;
+			&lt;TriggerAgent CriteriaId="ULTA_SCHEDULE.0001" /&gt;
+		&lt;/Input&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:23:01.350718" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/restapi/invoke/multiApi 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '61', 'Date': 'Sun, 09 Mar 2025 17:53:01 GMT'} 
+ body={"API":{"Output":{},"Name":"triggerAgent"}} 
+ </msg>
+<msg time="2025-03-09T23:23:01.351091" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>${input_file_Name1}</arg>
+<arg>${base_url_api1}${multiApi}</arg>
+<arg>data=${Json}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:23:00.542712" elapsed="0.808473"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-09T23:23:01.351840" elapsed="0.000701"/>
+</kw>
+<kw name="Convert Json To Xml" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:23:01.355550" level="INFO">${response1} = &lt;?xml version="1.0" ?&gt;
+&lt;Root&gt;
+	&lt;API Name="triggerAgent"&gt;
+		&lt;Output/&gt;
+	&lt;/API&gt;
+&lt;/Root&gt;
+</msg>
+<var>${response1}</var>
+<arg>${response.json()}</arg>
+<doc>Convert JSON string to XML format.</doc>
+<status status="PASS" start="2025-03-09T23:23:01.353012" elapsed="0.002611"/>
+</kw>
+<return>
+<value>${response}</value>
+<status status="PASS" start="2025-03-09T23:23:01.355757" elapsed="0.000077"/>
+</return>
+<arg>${CUR_DIR}</arg>
+<arg>${scheduleOrder_Input_file_Name}</arg>
+<status status="PASS" start="2025-03-09T23:23:00.540663" elapsed="0.815413"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<kw name="Generic Input File Ord" owner="Prepare_Xml_Content">
+<msg time="2025-03-09T23:23:01.359328" level="INFO">${getOrderDetailsxmlRequest} = &lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002493" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus=""...</msg>
+<var>${getOrderDetailsxmlRequest}</var>
+<arg>${CUR_DIR}</arg>
+<arg>${getOrderDetails_Input_file_Name}</arg>
+<arg>${OrderNo}</arg>
+<status status="PASS" start="2025-03-09T23:23:01.357968" elapsed="0.001464"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:23:01.361368" level="INFO">Creating Session using : alias=&lt;MultiApi&gt;
+	&lt;API Name="getOrderDetails"&gt;
+		&lt;Input&gt;
+			&lt;Order DocumentType="0001"  EnterpriseCode="CCULTA" OrderNo="T100002493" /&gt;
+		&lt;/Input&gt;
+		&lt;Template&gt;
+			&lt;Order OrderHeaderKey=""  MaxOrderStatus="" Status=""&gt;
+				&lt;OrderLines&gt;
+					&lt;OrderLine OrderLineKey="" OrderedQty=""/&gt;
+				&lt;/OrderLines&gt;
+			&lt;/Order&gt;
+		&lt;/Template&gt;
+	&lt;/API&gt;
+&lt;/MultiApi&gt;, url=http://9.30.252.13:9080, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T23:23:01.360933" elapsed="0.000875"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T23:23:01.362754" level="INFO">${params} = {'YFSEnvironment.progId': 'Test', 'InteropApiName': 'multiApi', 'ApiName': 'MultiApi', 'YFSEnvironment.userId': 'admin', 'YFSEnvironment.password': 'password', 'InteropApiData': '&lt;MultiApi&gt;\n\t&lt;API Na...</msg>
+<var>${params}</var>
+<arg>YFSEnvironment.progId=Test</arg>
+<arg>InteropApiName=multiApi</arg>
+<arg>ApiName=MultiApi</arg>
+<arg>YFSEnvironment.userId=admin</arg>
+<arg>YFSEnvironment.password=password</arg>
+<arg>InteropApiData=${xmlRequest}</arg>
+<arg>timeout=30</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T23:23:01.362172" elapsed="0.000641"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T23:23:03.995573" level="INFO">POST Request : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002493%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ path_url=/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002493%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T23:23:03.995779" level="INFO">POST Response : url=http://9.30.252.13:9080/smcfs/interop/InteropHttpServlet?YFSEnvironment.progId=Test&amp;InteropApiName=multiApi&amp;ApiName=MultiApi&amp;YFSEnvironment.userId=admin&amp;YFSEnvironment.password=password&amp;InteropApiData=%3CMultiApi%3E%0A%09%3CAPI+Name%3D%22getOrderDetails%22%3E%0A%09%09%3CInput%3E%0A%09%09%09%3COrder+DocumentType%3D%220001%22++EnterpriseCode%3D%22CCULTA%22+OrderNo%3D%22T100002493%22+%2F%3E%0A%09%09%3C%2FInput%3E%0A%09%09%3CTemplate%3E%0A%09%09%09%3COrder+OrderHeaderKey%3D%22%22++MaxOrderStatus%3D%22%22+Status%3D%22%22%3E%0A%09%09%09%09%3COrderLines%3E%0A%09%09%09%09%09%3COrderLine+OrderLineKey%3D%22%22+OrderedQty%3D%22%22%2F%3E%0A%09%09%09%09%3C%2FOrderLines%3E%0A%09%09%09%3C%2FOrder%3E%0A%09%09%3C%2FTemplate%3E%0A%09%3C%2FAPI%3E%0A%3C%2FMultiApi%3E&amp;timeout=30 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'InteropSentData': 'true', 'Content-Type': 'text/xml; charset=UTF-8', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Set-Cookie': 'JSESSIONID=0000dd9vpjat6Yjo3CLsDBbEMsg:1da3c8a0-fe1e-4c1e-8843-949a13de123e; Path=/; HttpOnly', 'Transfer-Encoding': 'chunked', 'Date': 'Sun, 09 Mar 2025 17:53:04 GMT', 'Expires': 'Thu, 01 Dec 1994 16:00:00 GMT', 'Cache-Control': 'no-cache="set-cookie, set-cookie2"'} 
+ body=&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;MultiApi&gt;&lt;API Name="getOrderDetails"&gt;&lt;Output&gt;&lt;Order MaxOrderStatus="1100" OrderHeaderKey="20250309175300359414" Status="Created"&gt;&lt;OrderLines&gt;&lt;OrderLine OrderLineKey="20250309175300359415" OrderedQty="3"/&gt;&lt;/OrderLines&gt;&lt;/Order&gt;&lt;/Output&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-03-09T23:23:03.996045" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<var>${resp}</var>
+<arg>${AddData}</arg>
+<arg>${req_uri}</arg>
+<arg>params=${params}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T23:23:01.363269" elapsed="2.632820"/>
+</kw>
+<return>
+<value>${resp}</value>
+<status status="PASS" start="2025-03-09T23:23:03.996223" elapsed="0.000067"/>
+</return>
+<msg time="2025-03-09T23:23:03.996524" level="INFO">${getOrderDetailResp} = &lt;Response [200]&gt;</msg>
+<var>${getOrderDetailResp}</var>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<arg>${getOrderDetailsxmlRequest}</arg>
+<status status="PASS" start="2025-03-09T23:23:01.359943" elapsed="2.636623"/>
+</kw>
+<kw name="Get Element" owner="XML">
+<msg time="2025-03-09T23:23:03.998033" level="INFO">${order} = &lt;Element 'Order' at 0x000002474F7FA890&gt;</msg>
+<var>${order}</var>
+<arg>${getOrderDetailResp.content}</arg>
+<arg>.//Order</arg>
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<status status="PASS" start="2025-03-09T23:23:03.996825" elapsed="0.001259"/>
+</kw>
+<kw name="Get Element Attribute" owner="XML">
+<msg time="2025-03-09T23:23:03.998584" level="INFO">${Status} = Created</msg>
+<var>${Status}</var>
+<arg>${order}</arg>
+<arg>Status</arg>
+<doc>Returns the named attribute of the specified element.</doc>
+<status status="PASS" start="2025-03-09T23:23:03.998321" elapsed="0.000302"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-03-09T23:23:03.999172" level="FAIL">Created != Scheduled</msg>
+<arg>${Status}</arg>
+<arg>${status_name}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2025-03-09T23:23:03.998825" elapsed="0.000441">Created != Scheduled</status>
+</kw>
+<return>
+<value>${getOrderDetailResp}</value>
+<status status="NOT RUN" start="2025-03-09T23:23:03.999336" elapsed="0.000019"/>
+</return>
+<arg>${CUR_DIR}</arg>
+<arg>Scheduled</arg>
+<arg>${OrderNo}</arg>
+<status status="FAIL" start="2025-03-09T23:23:01.356920" elapsed="2.642542">Created != Scheduled</status>
+</kw>
+<kw name="Manage MultiApi Ulta" owner="setUpForCreateOrder">
+<arg>${CUR_DIR}</arg>
+<arg>${releaseOrder_Input_file_Name}</arg>
+<status status="NOT RUN" start="2025-03-09T23:23:04.000141" elapsed="0.000049"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<arg>${CUR_DIR}</arg>
+<arg>Released</arg>
+<arg>${OrderNo}</arg>
+<status status="NOT RUN" start="2025-03-09T23:23:04.000618" elapsed="0.000061"/>
+</kw>
+<kw name="Confirm Shipment" owner="setUpForCreateOrder">
+<var>${confirmShipmentXmlRequest}</var>
+<arg>${OrderNo}</arg>
+<arg>${OrderHeaderKey}</arg>
+<status status="NOT RUN" start="2025-03-09T23:23:04.001244" elapsed="0.000036"/>
+</kw>
+<kw name="Creating Session Sample1" owner="createSession">
+<var>${confirmShipmentResp}</var>
+<arg>${confirmShipment_Input_file_Name}</arg>
+<arg>${confirmShipmentXmlRequest}</arg>
+<status status="NOT RUN" start="2025-03-09T23:23:04.001824" elapsed="0.000050"/>
+</kw>
+<kw name="Get Order Details" owner="setUpForCreateOrder">
+<arg>${CUR_DIR}</arg>
+<arg>Shipped</arg>
+<arg>${OrderNo}</arg>
+<status status="NOT RUN" start="2025-03-09T23:23:04.002795" elapsed="0.000047"/>
+</kw>
+<tag>HAPPYFLOW</tag>
+<tag>REGRESSION</tag>
+<tag>RELEASEORDER</tag>
+<tag>skip</tag>
+<tag>ULTA</tag>
+<status status="FAIL" start="2025-03-09T23:22:57.471295" elapsed="6.532036">Created != Scheduled</status>
+</test>
+<status status="FAIL" start="2025-03-09T23:22:36.874614" elapsed="27.130582"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CREATEORDER</stat>
+<stat pass="1" fail="3" skip="0">HAPPYFLOW</stat>
+<stat pass="1" fail="3" skip="0">REGRESSION</stat>
+<stat pass="0" fail="2" skip="0">RELEASEORDER</stat>
+<stat pass="0" fail="1" skip="0">SCHEDULEORDER</stat>
+<stat pass="1" fail="3" skip="0">skip</stat>
+<stat pass="1" fail="3" skip="0">ULTA</stat>
+</tag>
+<suite>
+<stat pass="1" fail="3" skip="0" id="s1" name="TC 001">TC 001</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
