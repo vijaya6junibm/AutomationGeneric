@@ -1,0 +1,25 @@
+==============================================================================
+CreateOrder                                                                   
+==============================================================================
+CreateOrder.CreateOrderApp create normal order TC 008                         
+==============================================================================
+CreateOrder.CreateOrderApp create normal order TC 008.Test                    
+==============================================================================
+CreateOrder.CreateOrderApp create normal order TC 008.Test.TC 008             
+==============================================================================
+Create Order TC_001                                                   <Response [200]>
+| PASS |
+------------------------------------------------------------------------------
+CreateOrder.CreateOrderApp create normal order TC 008.Test.TC 008     | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrderApp create normal order TC 008.Test            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrderApp create normal order TC 008                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder                                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\automation\AutomationGeneric\pabot_results\8\output.xml

@@ -1,0 +1,15 @@
+datasources:4ef68ae19d087665b46cb89c0923657d844c2bcf
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:858e47f8dcd7b91942aed3dc95d6bd54c8c285ad
+--suite CreateOrder.CreateOrder -create normal order ATG example 2 items TC 001.Test.TC 001
+--suite CreateOrder.CreateOrder -create normal order ATG example 2 items TC 001.Test.bak TC 001
+--suite CreateOrder.CreateOrder create normal order ATG ClickandCollect TC 002.Test.TC 002
+--suite CreateOrder.CreateOrder create normal order ATG example TC 003.Test.TC 003
+--suite CreateOrder.CreateOrder create order ATG example CC0D ClickandCollect same day TC 004.Test.TC 004
+--suite CreateOrder.CreateOrder create order ATG example HD1D flash next day TC 005.Test.TC 005
+--suite CreateOrder.CreateOrder create order ATG gift registry TC 006.Test.TC 006
+--suite CreateOrder.CreateOrderApp create normal order ClickandCollect TC 007.Test.TC 007
+--suite CreateOrder.CreateOrderApp create normal order TC 008.Test.TC 008
+--suite CreateOrder.CreateOrderPos create normal order ClickandCollect TC 009.Test.TC 009
+--suite CreateOrder.CreateOrderPos create normal order TC 010.Test.TC 010

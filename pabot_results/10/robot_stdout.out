@@ -1,0 +1,25 @@
+==============================================================================
+CreateOrder                                                                   
+==============================================================================
+CreateOrder.CreateOrderPos create normal order TC 010                         
+==============================================================================
+CreateOrder.CreateOrderPos create normal order TC 010.Test                    
+==============================================================================
+CreateOrder.CreateOrderPos create normal order TC 010.Test.TC 010             
+==============================================================================
+Create Order TC_001                                                   <Response [200]>
+| PASS |
+------------------------------------------------------------------------------
+CreateOrder.CreateOrderPos create normal order TC 010.Test.TC 010     | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrderPos create normal order TC 010.Test            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrderPos create normal order TC 010                 | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder                                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\automation\AutomationGeneric\pabot_results\10\output.xml

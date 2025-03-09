@@ -1,0 +1,28 @@
+==============================================================================
+CreateOrder                                                                   
+==============================================================================
+CreateOrder.CreateOrder -create normal order ATG example 2 items TC 001       
+==============================================================================
+CreateOrder.CreateOrder -create normal order ATG example 2 items TC 001.Test  
+==============================================================================
+CreateOrder.CreateOrder -create normal order ATG example 2 items TC 001.Tes...
+==============================================================================
+Create Order TC_001                                                   <Response [200]>
+application/json; charset=UTF-8
+'**************content type'
+Content-Type: application/json; charset=UTF-8
+| PASS |
+------------------------------------------------------------------------------
+CreateOrder.CreateOrder -create normal order ATG example 2 items T... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrder -create normal order ATG example 2 items T... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrder -create normal order ATG example 2 items T... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder                                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\automation\AutomationGeneric\pabot_results\0\output.xml

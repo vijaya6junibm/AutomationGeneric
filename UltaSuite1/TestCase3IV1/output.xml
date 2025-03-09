@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-03-09T22:59:16.825160" rpa="false" schemaversion="5">
+<suite id="s1" name="IVtest1" source="C:\automation\AutomationGeneric\UltaSuite1\TestCase3IV1\IVtest1.robot">
+<test id="s1-t1" name="Do a GET Request with Bearer token" line="13">
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-03-09T22:59:17.212742" level="INFO">&amp;{headers} = { Authorization=Bearer CuDeHLMXIo1u7i3kh22WIVh5w3iCIDDV }</msg>
+<var>&amp;{headers}</var>
+<arg>Authorization=${dev_b_token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-03-09T22:59:17.212483" elapsed="0.000285"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-03-09T22:59:17.213205" level="INFO">Creating Session using : alias=dev_b_session, url=https://api.watsoncommerce.ibm.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>dev_b_session</arg>
+<arg>${dev_b_server}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-03-09T22:59:17.213091" elapsed="0.000230"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T22:59:17.213716" level="INFO">{'Authorization': 'Bearer CuDeHLMXIo1u7i3kh22WIVh5w3iCIDDV'}</msg>
+<arg>${headers}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T22:59:17.213624" elapsed="0.000118"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2025-03-09T22:59:18.063119" level="INFO">GET Request : url=https://api.watsoncommerce.ibm.com/inventory/us-bae29482/v1/configuration/shipNodes/0007 
+ path_url=/inventory/us-bae29482/v1/configuration/shipNodes/0007 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer CuDeHLMXIo1u7i3kh22WIVh5w3iCIDDV'} 
+ body=None 
+ </msg>
+<msg time="2025-03-09T22:59:18.063258" level="INFO">GET Response : url=https://api.watsoncommerce.ibm.com/inventory/us-bae29482/v1/configuration/shipNodes/0007 
+ status=200, reason=OK 
+ headers={'Content-Type': 'application/json', 'Content-Length': '126', 'X-RateLimit-Remaining-Hour': '9997', 'RateLimit-Remaining': '9997', 'RateLimit-Reset': '1842', 'RateLimit-Limit': '10000', 'X-RateLimit-Limit-Hour': '10000', 'X-Content-Type-Options': 'nosniff', 'X-XSS-Protection': '1', 'Content-Security-Policy': "default-src 'none'", 'Content-Language': 'en-US', 'Access-Control-Allow-Origin': '*', 'Server-Timing': 'intid;desc=7912174f0697597f', 'Expires': 'Sun, 09 Mar 2025 17:29:18 GMT', 'Cache-Control': 'max-age=0, no-cache, no-store', 'Pragma': 'no-cache', 'Date': 'Sun, 09 Mar 2025 17:29:18 GMT', 'Connection': 'keep-alive', 'Strict-Transport-Security': 'max-age=31536000 ; includeSubDomains ; preload'} 
+ body={"shipNode":"0007","latitude":41.665539,"longitude":-88.115949,"fulfillmentOverrides":[{"deliveryMethod":"SHP","allow":true}]} 
+ </msg>
+<msg time="2025-03-09T22:59:18.063351" level="INFO">C:\pythonInst\Lib\site-packages\urllib3\connectionpool.py:1099: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.watsoncommerce.ibm.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-03-09T22:59:18.063902" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>dev_b_session</arg>
+<arg>/inventory/us-bae29482/v1/configuration/shipNodes/0007</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-03-09T22:59:17.214002" elapsed="0.849947"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-09T22:59:18.064651" level="INFO">&lt;Response [200]&gt;</msg>
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-09T22:59:18.064448" elapsed="0.000260"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-03-09T22:59:18.065099" elapsed="0.001173"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>200</arg>
+<arg>${response}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-03-09T22:59:18.066609" elapsed="0.000275"/>
+</kw>
+<status status="PASS" start="2025-03-09T22:59:17.211734" elapsed="0.855542"/>
+</test>
+<doc>API Testing in Robot Framework</doc>
+<status status="PASS" start="2025-03-09T22:59:16.826572" elapsed="1.241908"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="IVtest1">IVtest1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,24 @@
+==============================================================================
+CreateOrder                                                                   
+==============================================================================
+CreateOrder.CreateOrder create order ATG example HD1D flash next day TC 005   
+==============================================================================
+CreateOrder.CreateOrder create order ATG example HD1D flash next day TC 005...
+==============================================================================
+CreateOrder.CreateOrder create order ATG example HD1D flash next day TC 005...
+==============================================================================
+Create Order TC_005                                                   | PASS |
+------------------------------------------------------------------------------
+CreateOrder.CreateOrder create order ATG example HD1D flash next d... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrder create order ATG example HD1D flash next d... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder.CreateOrder create order ATG example HD1D flash next d... | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+CreateOrder                                                           | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\automation\AutomationGeneric\pabot_results\5\output.xml

@@ -1,0 +1,43 @@
+==============================================================================
+CreateOrder                                                                   
+==============================================================================
+CreateOrder.CreateOrder create order ATG gift registry TC 006                 
+==============================================================================
+CreateOrder.CreateOrder create order ATG gift registry TC 006.Test            
+==============================================================================
+CreateOrder.CreateOrder create order ATG gift registry TC 006.Test.TC 006     
+==============================================================================
+Create Order TC_001                                                     
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\automation\AutomationGeneric\LvrplSL\CreateOrder\CreateOrder_create_order_ATG_gift_registry_TC_006\test\TC_006.robot:13
+    T:  Create Order TC_001    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\automation\AutomationGeneric\LvrplSL\CreateOrder\CreateOrder_create_order_ATG_gift_registry_TC_006\test\TC_006.robot:26
+      POST On Session    AddData    ${base_url_api}${findInventory}    data=${jsonfindInventory}    headers=${headers}
+      |  ${base_url_api}${findInventory} = http://9.30.26.220:9080/smcfs/restapi/invoke/findInventory (str)
+      |  data=${jsonfindInventory} = data=<Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool"
+ OrganizationCode="Liverpool">
+	<ShipToAddress Country="MX" ZipCode="98047"/>
+	<PromiseLines>
+		<PromiseLine ItemID="2025030922300478" LineId="1" RequiredQty="20" UnitOfMeasure="UN"/>
+	</PromiseLines>
+</Promise> (str)
+      |  headers=${headers} = headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='} (str)
+______________________________________________________________________________
+| FAIL |
+HTTPError: 400 Client Error: Bad Request for url: http://9.30.26.220:9080/smcfs/restapi/invoke/findInventory
+------------------------------------------------------------------------------
+CreateOrder.CreateOrder create order ATG gift registry TC 006.Test... | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+CreateOrder.CreateOrder create order ATG gift registry TC 006.Test    | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+CreateOrder.CreateOrder create order ATG gift registry TC 006         | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+CreateOrder                                                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\automation\AutomationGeneric\pabot_results\6\output.xml
