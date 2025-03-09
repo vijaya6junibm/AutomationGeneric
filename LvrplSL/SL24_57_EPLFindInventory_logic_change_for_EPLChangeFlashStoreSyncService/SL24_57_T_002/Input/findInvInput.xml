@@ -1,0 +1,7 @@
+<MultiApi><API FlowName="EPLFindInventorySyncService"><Input><Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool"
+ OrganizationCode="Liverpool">
+	<ShipToAddress Country="MX" ZipCode="98047"/>
+	<PromiseLines>
+		<PromiseLine ItemID="$ItemID" LineId="1" RequiredQty="20" UnitOfMeasure="UN"/>
+	</PromiseLines>
+</Promise></Input></API></MultiApi>

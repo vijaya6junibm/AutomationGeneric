@@ -1,0 +1,31 @@
+<Order Action="CREATE" AllocationRuleID="FWD_RULES" CustomerPONo=""
+    CustomerRewardsNo="" DepartmentCode="" Division=""
+    DocumentType="0001" DraftOrderFlag="Y" EnterpriseCode="Liverpool"
+    OrderDate="2024-06-24T11:00:02-05:00" OrderName="106"
+    OrderNo="$OrderNo" OrderType="Personal">
+    <OrderLines>
+        <OrderLine FulfillmentType="Liverpool_CNC_PICK_PACK" OrderedQty="1">
+            <Item ItemID="$ItemID" UnitOfMeasure="UN"/>
+            <LinePriceInfo IsPriceLocked="Y" UnitPrice="64191.2"/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo
+        AddressLine1="0106 LIV Liverpool Galerias Serdan Puebla BOULEVARD HERMANOS SERDAN 27"
+        AddressLine2="" AddressLine4="VILLA POSADAS"
+        AddressLine5="PUEBLA" City="PUEBLA" Country="MX"
+        DayPhone="221 03090039" EMailID="suasteguipinedaamgel@gmail.com"
+        FirstName="ANGEL SUASTEGUI PINEDA" LastName=""
+        MobilePhone="221 03090039" State="Puebla" ZipCode="72060"/>
+    <PersonInfoShipTo
+        AddressLine1="0106LIV Liverpool Galerias Serdan Puebla BOULEVARD HERMANOS SERDAN 27"
+        AddressLine2="" AddressLine4="VILLA POSADAS"
+        AddressLine5="PUEBLA" City="PUEBLA" Country="MX"
+        DayPhone="221 03090039" EMailID="suasteguipinedaamgel@gmail.com"
+        FirstName="ANGEL SUASTEGUI PINEDA" LastName="" State="Puebla" ZipCode="72060"/>
+    <PersonInfoContact
+        AddressLine1="0106 LIV Liverpool Galerias Serdan Puebla BOULEVARD HERMANOS SERDAN 27"
+        AddressLine2="" AddressLine4="VILLA POSADAS"
+        AddressLine5="PUEBLA" City="PUEBLA" Country="MX"
+        DayPhone="221 03090039" EMailID="suasteguipinedaamgel@gmail.com"
+        FirstName="ANGEL SUASTEGUI PINEDA" LastName="" State="Puebla" ZipCode="72060"/>
+</Order>

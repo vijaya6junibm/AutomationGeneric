@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T15:40:45.542687" rpa="false" schemaversion="5">
+<suite id="s1" name="scheduleOrder" source="C:\EPL-Liverpool-SL\LvrplSL\SmokeTest\HappyFlow\S05\test\scheduleOrder.robot">
+<test id="s1-t1" name="Schedule Order TC_001" line="13">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-27T15:40:47.126167" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-27T15:40:47.125886" elapsed="0.000324"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-27T15:40:47.126850" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001E2DCB79400&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-27T15:40:47.126385" elapsed="0.000720"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-01-27T15:40:47.124962" elapsed="0.002260"/>
+</kw>
+<kw name="Manage Item With Dynamic Item">
+<msg time="2025-01-27T15:40:47.129587" level="FAIL">No keyword with name 'Manage Item With Dynamic Item' found. Did you try using keyword 'Create_Order_Xml_Content.Manage Item' and forgot to use enough whitespace between keyword and arguments?</msg>
+<var>${manageItemJson}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="FAIL" start="2025-01-27T15:40:47.129541" elapsed="0.000105">No keyword with name 'Manage Item With Dynamic Item' found. Did you try using keyword 'Create_Order_Xml_Content.Manage Item' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${manageItemResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${manageItem}</arg>
+<arg>data=${manageItemJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.130119" elapsed="0.000031"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${manageItemResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.130574" elapsed="0.000031"/>
+</kw>
+<kw name="Manage Item With Dynamic Item1">
+<var>${jsonItemId}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.131098" elapsed="0.000031"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${jsonItemId}</arg>
+<arg>ItemList</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.131403" elapsed="0.000025"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${Item_ID_Path}</var>
+<arg>${jsonItemId}</arg>
+<arg>ItemList</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.131870" elapsed="0.000029"/>
+</kw>
+<kw name="Adjust Inventory File">
+<var>${jsonAdjInv}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.132337" elapsed="0.000034"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${adjInvresponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${adjustInventory}</arg>
+<arg>data=${jsonAdjInv}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.132815" elapsed="0.000036"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${adjInvresponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.133922" elapsed="0.000031"/>
+</kw>
+<kw name="Find Inventory File">
+<var>${jsonfindInventory}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.134496" elapsed="0.000044"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${findInventoryResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${findInventory}</arg>
+<arg>data=${jsonfindInventory}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.134826" elapsed="0.000026"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<var>${resp}</var>
+<arg>${findInventoryResponse.json()}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.135148" elapsed="0.000032"/>
+</kw>
+<kw name="Write Output File">
+<arg>${resp}</arg>
+<arg>'findInv'</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.135560" elapsed="0.000030"/>
+</kw>
+<kw name="Create Order File">
+<var>${jsonCreateOrder}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.136017" elapsed="0.000029"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${createOrderResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${createOrder}</arg>
+<arg>data=${jsonCreateOrder}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.136424" elapsed="0.000030"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<var>${resp2}</var>
+<arg>${createOrderResponse.json()}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.136845" elapsed="0.000032"/>
+</kw>
+<kw name="Write Output File">
+<arg>${resp2}</arg>
+<arg>'createOrder'</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.137634" elapsed="0.000029"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${createOrderResponse}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.138072" elapsed="0.000030"/>
+</kw>
+<kw name="Get Current Date" owner="DateTime">
+<var>${timestamp}</var>
+<arg>result_format=%Y%m%d-%H%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.138520" elapsed="0.000030"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${createOrderResponse.json()}</arg>
+<arg>OrderNo</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.138953" elapsed="0.000030"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${Order_No}</var>
+<arg>${createOrderResponse.json()}</arg>
+<arg>OrderNo</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.139339" elapsed="0.000026"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${createOrderResponse.json()}</arg>
+<arg>OrderHeaderKey</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.139731" elapsed="0.000031"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${Order_Header_Key}</var>
+<arg>${createOrderResponse.json()}</arg>
+<arg>OrderHeaderKey</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.140361" elapsed="0.000032"/>
+</kw>
+<kw name="Append Excel File1" owner="read_write_all_excel">
+<arg>${file}</arg>
+<arg>${Order_No}</arg>
+<arg>${TEST NAME}</arg>
+<arg>${timestamp}</arg>
+<arg>${jsonCreateOrder}</arg>
+<arg>${createOrderResponse.json()}</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.140643" elapsed="0.000024"/>
+</kw>
+<kw name="Schedule Input File1">
+<var>${Order_No1}</var>
+<arg>${Order_No}</arg>
+<arg>${Order_Header_Key}</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.141385" elapsed="0.000029"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${response1}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${scheduleOrder}</arg>
+<arg>data=${Order_No1}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.141780" elapsed="0.000030"/>
+</kw>
+<kw name="GetOrderDetails Input File1">
+<var>${Order_No2}</var>
+<arg>${Order_No}</arg>
+<arg>${Order_Header_Key}</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.142271" elapsed="0.000031"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<var>${response1}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${getOrderDetails}</arg>
+<arg>data=${Order_No2}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.142722" elapsed="0.000030"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<var>${resp1}</var>
+<arg>${response1.json()}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.143190" elapsed="0.000031"/>
+</kw>
+<kw name="Write Output File">
+<arg>${resp2}</arg>
+<arg>${getOrderDetails}</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SmokeTest\\HappyFlow\\S05\\test</arg>
+<status status="NOT RUN" start="2025-01-27T15:40:47.143594" elapsed="0.000029"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'b7 getOrderDetails'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.144024" elapsed="0.000030"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response1.json()}</arg>
+<arg>Status</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.144455" elapsed="0.000030"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<var>${Order_Status}</var>
+<arg>${response1.json()}</arg>
+<arg>Status</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.145256" elapsed="0.000030"/>
+</kw>
+<kw name="Get Value From Json" owner="JSONLibrary">
+<var>${values}</var>
+<arg>${response1.json()}</arg>
+<arg>$..ItemID</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<status status="NOT RUN" start="2025-01-27T15:40:47.145694" elapsed="0.000030"/>
+</kw>
+<tag>HAPPYFLOW</tag>
+<status status="FAIL" start="2025-01-27T15:40:47.123861" elapsed="0.022368">No keyword with name 'Manage Item With Dynamic Item' found. Did you try using keyword 'Create_Order_Xml_Content.Manage Item' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<status status="FAIL" start="2025-01-27T15:40:45.544769" elapsed="1.603067"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">HAPPYFLOW</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="scheduleOrder">scheduleOrder</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-27T15:40:47.120348" level="ERROR">Error in file 'C:\EPL-Liverpool-SL\LvrplSL\SmokeTest\HappyFlow\S05\test\scheduleOrder.robot' on line 5: Importing library 'C:\EPL-Liverpool-SL\LvrplSL\Resources\Prepare_Xml_Content.py' failed: IndentationError: unexpected indent (Prepare_Xml_Content.py, line 122)
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\EPL-Liverpool-SL\LvrplSL\Resources
+  C:\pythonInst\Scripts\robot.exe
+  C:\pythonInst\python313.zip
+  C:\pythonInst\DLLs
+  C:\pythonInst\Lib
+  C:\pythonInst
+  C:\pythonInst\Lib\site-packages</msg>
+</errors>
+</robot>

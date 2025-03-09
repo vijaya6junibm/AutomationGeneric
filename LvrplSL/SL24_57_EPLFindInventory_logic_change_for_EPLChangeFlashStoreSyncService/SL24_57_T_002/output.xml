@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-29T11:25:46.727901" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\EPL-Liverpool-SL\LvrplSL\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\SL24_57_T_002\test">
+<suite id="s1-s1" name="Multiapi" source="C:\EPL-Liverpool-SL\LvrplSL\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\SL24_57_T_002\test\Multiapi.robot">
+<test id="s1-s1-t1" name="Create Order TC_001" line="13">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-29T11:25:47.526661" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.526504" elapsed="0.000184"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-29T11:25:47.527018" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x00000183C24C9400&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-29T11:25:47.526783" elapsed="0.000377"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-01-29T11:25:47.525725" elapsed="0.001492"/>
+</kw>
+<kw name="Manage Item With Dynamic Item" owner="Prepare_Xml_Content">
+<msg time="2025-01-29T11:25:47.528365" level="INFO">before mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;
+after mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250129112547" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;</msg>
+<msg time="2025-01-29T11:25:47.528463" level="INFO">${manageItemJson} = &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250129112547" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSu...</msg>
+<var>${manageItemJson}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\\SL24_57_T_002\\test</arg>
+<status status="PASS" start="2025-01-29T11:25:47.527531" elapsed="0.000950"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-29T11:25:47.563969" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/invoke/manageItem 
+ path_url=/smcfs/restapi/invoke/manageItem 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '1022'} 
+ body=&lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250129112547" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt; 
+ </msg>
+<msg time="2025-01-29T11:25:47.564039" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/invoke/manageItem 
+ status=204, reason=No Content 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '0', 'Date': 'Wed, 29 Jan 2025 05:55:47 GMT'} 
+ body=None 
+ </msg>
+<msg time="2025-01-29T11:25:47.564126" level="INFO">${manageItemResponse} = &lt;Response [204]&gt;</msg>
+<var>${manageItemResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${manageItem}</arg>
+<arg>data=${manageItemJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.528747" elapsed="0.035398"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${manageItemResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.564453" elapsed="0.000227"/>
+</kw>
+<kw name="Manage Item With Dynamic Item1" owner="Prepare_Xml_Content">
+<msg time="2025-01-29T11:25:47.571945" level="INFO">after mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250129112547" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;</msg>
+<msg time="2025-01-29T11:25:47.572228" level="INFO">${jsonItemId} = {'ItemList': {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250129112547', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnItem...</msg>
+<var>${jsonItemId}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\\SL24_57_T_002\\test</arg>
+<status status="PASS" start="2025-01-29T11:25:47.564875" elapsed="0.007377"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${jsonItemId}</arg>
+<arg>ItemList</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.572551" elapsed="0.000131"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.573047" level="INFO">${Item_ID_Path} = {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250129112547', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnItemSF': 'Y', '_E...</msg>
+<var>${Item_ID_Path}</var>
+<arg>${jsonItemId}</arg>
+<arg>ItemList</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.572915" elapsed="0.000148"/>
+</kw>
+<kw name="Adjust Inventory File" owner="Prepare_Xml_Content">
+<msg time="2025-01-29T11:25:47.573606" level="INFO">${jsonAdjInv} = &lt;Items&gt;
+	&lt;Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="20250129112547" OrganizationCode="Liverpool" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="...</msg>
+<var>${jsonAdjInv}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\\SL24_57_T_002\\test</arg>
+<status status="PASS" start="2025-01-29T11:25:47.573336" elapsed="0.000288"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-29T11:25:47.608340" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/invoke/adjustInventory 
+ path_url=/smcfs/restapi/invoke/adjustInventory 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '254'} 
+ body=&lt;Items&gt;
+	&lt;Item AdjustmentType="ABSOLUTE" Availability="TRACK" ItemID="20250129112547" OrganizationCode="Liverpool" Quantity="100" ReasonCode="itemSLRTAMS19t2" ReasonText="Ajuste GoldenGate" ShipNode="127" SupplyType="ONHAND" UnitOfMeasure="UN"/&gt;
+&lt;/Items&gt; 
+ </msg>
+<msg time="2025-01-29T11:25:47.608406" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/invoke/adjustInventory 
+ status=204, reason=No Content 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '0', 'Date': 'Wed, 29 Jan 2025 05:55:47 GMT'} 
+ body=None 
+ </msg>
+<msg time="2025-01-29T11:25:47.608521" level="INFO">${adjInvresponse} = &lt;Response [204]&gt;</msg>
+<var>${adjInvresponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${adjustInventory}</arg>
+<arg>data=${jsonAdjInv}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.574052" elapsed="0.034485"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${adjInvresponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.609109" elapsed="0.000201"/>
+</kw>
+<kw name="Find Inventory File" owner="Prepare_Xml_Content">
+<msg time="2025-01-29T11:25:47.610008" level="INFO">${jsonfindInventory} = &lt;MultiApi&gt;&lt;API FlowName="EPLFindInventorySyncService"&gt;&lt;Input&gt;&lt;Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool"
+ Organizat...</msg>
+<var>${jsonfindInventory}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\\SL24_57_T_002\\test</arg>
+<status status="PASS" start="2025-01-29T11:25:47.609608" elapsed="0.000429"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-29T11:25:47.681686" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/invoke/multiApi 
+ path_url=/smcfs/restapi/invoke/multiApi 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '424'} 
+ body=&lt;MultiApi&gt;&lt;API FlowName="EPLFindInventorySyncService"&gt;&lt;Input&gt;&lt;Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool"
+ OrganizationCode="Liverpool"&gt;
+	&lt;ShipToAddress Country="MX" ZipCode="98047"/&gt;
+	&lt;PromiseLines&gt;
+		&lt;PromiseLine ItemID="20250129112547" LineId="1" RequiredQty="20" UnitOfMeasure="UN"/&gt;
+	&lt;/PromiseLines&gt;
+&lt;/Promise&gt;&lt;/Input&gt;&lt;/API&gt;&lt;/MultiApi&gt; 
+ </msg>
+<msg time="2025-01-29T11:25:47.681770" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/invoke/multiApi 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '517', 'Date': 'Wed, 29 Jan 2025 05:55:47 GMT'} 
+ body={"API":{"Output":{"Promise":{"SuggestedOption":{"Option":{"LastDate":"2025-01-29T05:55:47+00:00","OptionNo":"3","NodeQty":"20.00","FirstDate":"2025-01-29T05:55:47+00:00","AvailableFromUnplannedInventory":"N","TotalShipments":"1","Interactions":{"Interaction":[{"LastDate":"2025-02-28T23:59:59+00:00","DeliveryMethod":"SHP","Node":"127","ItemGroupCode":"PROD","OrganizationCode":"","DeliveryDate":"2025-01-29T05:55:47+00:00","ShipDate":"2025-01-29T05:55:47+00:00","EarliestDate":"2025-01-29T00:00:00+00:00","InteractionNo":"1"}],"TotalNumberOfRecords":"1"},"PromiseLines":{"PromiseLine":[{"DeliveryMethod":"SHP","LineId":"1","UnitOfMeasure":"UN","Assignments":{"Assignment":[{"InvQty":"20.00","AvailableFromUnplannedInventory":"N","Quantity":"20.00","NodePriority":"10.00","Supplies":{"Supply":{"ConsumedQuantity":"20.00","FirstShipDate":"2025-01-29"}},"DeliveryDate":"2025-01-29T05:55:47+00:00","ShipDate":"2025-01-29T05:55:47+00:00","ShipNode":"127","InteractionNo":"1","ProductAvailDate":"2025-01-29","Distance":"0.00"}],"TotalNumberOfRecords":"1"},"RequiredQty":"20","DistributionRuleId":"","ShipNode":"","ItemID":"20250129112547"}],"TotalNumberOfRecords":"1"},"HasAnyUnavailableQty":"N"}},"OrganizationCode":"Liverpool","EnterpriseCode":"Liverpool","FulfillmentType":"Fulfillment_Type_Liverpool"}},"Name":""}} 
+ </msg>
+<msg time="2025-01-29T11:25:47.681857" level="INFO">${findInventoryResponse} = &lt;Response [200]&gt;</msg>
+<var>${findInventoryResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${multiApi}</arg>
+<arg>data=${jsonfindInventory}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.610231" elapsed="0.071641"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${findInventoryResponse.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.682253" elapsed="0.000780"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-01-29T11:25:47.683967" level="INFO">${resp} = {'API': {'Output': {'Promise': {'SuggestedOption': {'Option': {'LastDate': '2025-01-29T05:55:47+00:00', 'OptionNo': '3', 'NodeQty': '20.00', 'FirstDate': '2025-01-29T05:55:47+00:00', 'AvailableFromUnp...</msg>
+<var>${resp}</var>
+<arg>${findInventoryResponse.json()}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.683295" elapsed="0.000688"/>
+</kw>
+<kw name="Write Output File" owner="Prepare_Xml_Content">
+<arg>${resp}</arg>
+<arg>'findInv'</arg>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\\SL24_57_T_002\\test</arg>
+<status status="PASS" start="2025-01-29T11:25:47.684263" elapsed="0.001069"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${findInventoryResponse.json()}</arg>
+<arg>API</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.685550" elapsed="0.000477"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.686648" level="INFO">${api} = {'Output': {'Promise': {'SuggestedOption': {'Option': {'LastDate': '2025-01-29T05:55:47+00:00', 'OptionNo': '3', 'NodeQty': '20.00', 'FirstDate': '2025-01-29T05:55:47+00:00', 'AvailableFromUnplannedIn...</msg>
+<var>${api}</var>
+<arg>${findInventoryResponse.json()}</arg>
+<arg>API</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.686182" elapsed="0.000483"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.687382" level="INFO">${Output} = {'Promise': {'SuggestedOption': {'Option': {'LastDate': '2025-01-29T05:55:47+00:00', 'OptionNo': '3', 'NodeQty': '20.00', 'FirstDate': '2025-01-29T05:55:47+00:00', 'AvailableFromUnplannedInventory': '...</msg>
+<var>${Output}</var>
+<arg>${api}</arg>
+<arg>Output</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.687240" elapsed="0.000159"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.687791" level="INFO">${Promise} = {'SuggestedOption': {'Option': {'LastDate': '2025-01-29T05:55:47+00:00', 'OptionNo': '3', 'NodeQty': '20.00', 'FirstDate': '2025-01-29T05:55:47+00:00', 'AvailableFromUnplannedInventory': 'N', 'TotalSh...</msg>
+<var>${Promise}</var>
+<arg>${Output}</arg>
+<arg>Promise</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.687646" elapsed="0.000162"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.688194" level="INFO">${Order_No} = {'Option': {'LastDate': '2025-01-29T05:55:47+00:00', 'OptionNo': '3', 'NodeQty': '20.00', 'FirstDate': '2025-01-29T05:55:47+00:00', 'AvailableFromUnplannedInventory': 'N', 'TotalShipments': '1', 'Inte...</msg>
+<var>${Order_No}</var>
+<arg>${Promise}</arg>
+<arg>SuggestedOption</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.688049" elapsed="0.000165"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.688654" level="INFO">${Option} = {'LastDate': '2025-01-29T05:55:47+00:00', 'OptionNo': '3', 'NodeQty': '20.00', 'FirstDate': '2025-01-29T05:55:47+00:00', 'AvailableFromUnplannedInventory': 'N', 'TotalShipments': '1', 'Interactions': ...</msg>
+<var>${Option}</var>
+<arg>${Order_No}</arg>
+<arg>Option</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.688491" elapsed="0.000180"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.689067" level="INFO">${PromiseLines} = {'PromiseLine': [{'DeliveryMethod': 'SHP', 'LineId': '1', 'UnitOfMeasure': 'UN', 'Assignments': {'Assignment': [{'InvQty': '20.00', 'AvailableFromUnplannedInventory': 'N', 'Quantity': '20.00', 'NodePr...</msg>
+<var>${PromiseLines}</var>
+<arg>${Option}</arg>
+<arg>PromiseLines</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.688937" elapsed="0.000147"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.689435" level="INFO">${PromiseLine} = [{'DeliveryMethod': 'SHP', 'LineId': '1', 'UnitOfMeasure': 'UN', 'Assignments': {'Assignment': [{'InvQty': '20.00', 'AvailableFromUnplannedInventory': 'N', 'Quantity': '20.00', 'NodePriority': '10.00'...</msg>
+<var>${PromiseLine}</var>
+<arg>${PromiseLines}</arg>
+<arg>PromiseLine</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.689315" elapsed="0.000133"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-01-29T11:25:47.689805" level="INFO">${AssignmentsList} = {'DeliveryMethod': 'SHP', 'LineId': '1', 'UnitOfMeasure': 'UN', 'Assignments': {'Assignment': [{'InvQty': '20.00', 'AvailableFromUnplannedInventory': 'N', 'Quantity': '20.00', 'NodePriority': '10.00',...</msg>
+<var>${AssignmentsList}</var>
+<arg>${PromiseLine}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.689675" elapsed="0.000147"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.690173" level="INFO">${assignments} = {'Assignment': [{'InvQty': '20.00', 'AvailableFromUnplannedInventory': 'N', 'Quantity': '20.00', 'NodePriority': '10.00', 'Supplies': {'Supply': {'ConsumedQuantity': '20.00', 'FirstShipDate': '2025-01...</msg>
+<var>${assignments}</var>
+<arg>${AssignmentsList}</arg>
+<arg>Assignments</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.690061" elapsed="0.000153"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.690836" level="INFO">${assignment} = [{'InvQty': '20.00', 'AvailableFromUnplannedInventory': 'N', 'Quantity': '20.00', 'NodePriority': '10.00', 'Supplies': {'Supply': {'ConsumedQuantity': '20.00', 'FirstShipDate': '2025-01-29'}}, 'Delive...</msg>
+<var>${assignment}</var>
+<arg>${Assignments}</arg>
+<arg>Assignment</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.690728" elapsed="0.000123"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<msg time="2025-01-29T11:25:47.691226" level="INFO">${assignmentList} = {'InvQty': '20.00', 'AvailableFromUnplannedInventory': 'N', 'Quantity': '20.00', 'NodePriority': '10.00', 'Supplies': {'Supply': {'ConsumedQuantity': '20.00', 'FirstShipDate': '2025-01-29'}}, 'Deliver...</msg>
+<var>${assignmentList}</var>
+<arg>${assignment}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.691113" elapsed="0.000128"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:25:47.691604" level="INFO">${ShipNode} = 127</msg>
+<var>${ShipNode}</var>
+<arg>${assignmentList}</arg>
+<arg>ShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.691499" elapsed="0.000118"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-29T11:25:47.691962" level="INFO">127</msg>
+<arg>${ShipNode}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-29T11:25:47.691878" elapsed="0.000108"/>
+</kw>
+<tag>CREATEORDER</tag>
+<tag>HAPPYFLOW</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-01-29T11:25:47.524855" elapsed="0.167372"/>
+</test>
+<status status="PASS" start="2025-01-29T11:25:46.755244" elapsed="0.937838"/>
+</suite>
+<status status="PASS" start="2025-01-29T11:25:46.729335" elapsed="0.964796"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CREATEORDER</stat>
+<stat pass="1" fail="0" skip="0">HAPPYFLOW</stat>
+<stat pass="1" fail="0" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Multiapi">Test.Multiapi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

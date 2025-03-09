@@ -1,0 +1,22 @@
+Create Order TC_001,20250207-1918,20250207191832443,"<Order AllocationRuleID=""FWD_RULES"" CustomerPONo=""o1837376354"" CustomerRewardsNo=""2027498301"" DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderDate=""2023-11-02T09:05:27-06:00"" OrderName=""0904202401"" OrderNo=""20250207191832443"" OrderType=""Personal"">
+<OrderLines>
+<OrderLine Delivery="""" FulfillmentType=""Liverpool_CNC_PICK_PACK"" OrderedQty=""1"" Store="""">
+<Item ItemDesc="" "" ItemID=""20250207191832443"" UnitOfMeasure=""UN""/>
+<LinePriceInfo IsPriceLocked=""Y"" ListPrice=""279.3"" UnitPrice=""279.3""/>
+<References>
+<Reference Name=""Promotion1"" Value=""30% de descuento""/>
+<Reference Name=""DiscountAmount"" Value=""119.69999999999999""/>
+</References>
+</OrderLine>
+</OrderLines>
+<PersonInfoShipTo AddressLine1=""0398 LIV Liverpool Galerías Insurgentes Av. Insurgentes Sur"" AddressLine2=""1310"" AddressLine4="""" AddressLine5=""Benito Juárez"" AddressLine6=""Entre calle Eje 7 Félix Cuevas y Parroquia"" City=""Col. Del Valle"" Country=""MX"" DayPhone=""5554801300"" EMailID=""iramosg@liverpool.com.mx"" FirstName=""ismael"" LastName=""avrilchiva"" State=""Lázaro Cárdenas"" ZipCode=""60955""/>
+<PersonInfoBillTo AddressLine1=""na"" AddressLine2=""na"" AddressLine4="""" AddressLine5=""IZTAPALAPA"" City=""cdmx"" Country=""MX"" DayPhone=""555-2575722"" FirstName=""na na"" LastName="""" State=""DISTRITO FEDERAL"" ZipCode=""06010""/>
+<PersonInfoContact AddressLine1=""20 palma"" AddressLine2=""20"" AddressLine4=""EL ARBOL"" AddressLine5=""ALVARO OBREGON"" City=""ALVARO OBREGON"" Country=""MX"" DayPhone=""56-21945242"" EMailID=""iramosg@liverpool.com.mx"" FirstName=""ismael"" LastName=""avrilchiva"" State=""CIUDAD DE MEXICO"" ZipCode=""52789""/>
+<HeaderCharges>
+<HeaderCharge ChargeAmount=""0"" ChargeCategory=""Shipping"" ChargeName=""Shipping""/>
+</HeaderCharges>
+<References>
+<Reference Name=""TicketNo"" Value=""3070000109""/>
+<Reference Name=""BankAuthNo"" Value=""897519""/>
+</References>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250207191832443', 'OrderHeaderKey': '202502071348501042019', 'EnterpriseCode': 'Liverpool'}"

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-29T11:18:46.586728" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="C:\EPL-Liverpool-SL\LvrplSL\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\SL24_57_T_009\test">
+<suite id="s1-s1" name="TC 001 EPLFlashStoreLoadSyncService" source="C:\EPL-Liverpool-SL\LvrplSL\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\SL24_57_T_009\test\TC_001_EPLFlashStoreLoadSyncService.robot">
+<test id="s1-s1-t1" name="Create Order TC_001" line="13">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-29T11:18:47.421399" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.421274" elapsed="0.000148"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-29T11:18:47.421725" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002067FE29400&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-29T11:18:47.421508" elapsed="0.000345"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-01-29T11:18:47.420787" elapsed="0.001119"/>
+</kw>
+<kw name="Input File1" owner="Prepare_Xml_Content">
+<msg time="2025-01-29T11:18:47.422414" level="INFO">${sfLoadJson} = &lt;FlashStoreByCP ZipCode="98047" ShipNode="127" Distance="0"/&gt;</msg>
+<var>${sfLoadJson}</var>
+<arg>C:\\EPL-Liverpool-SL\\LvrplSL\\SL24_57_EPLFindInventory_logic_change_for_EPLChangeFlashStoreSyncService\\SL24_57_T_009\\test</arg>
+<status status="PASS" start="2025-01-29T11:18:47.422183" elapsed="0.000248"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-29T11:18:47.440183" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLFlashStoreLoadSyncService 
+ path_url=/smcfs/restapi/executeFlow/EPLFlashStoreLoadSyncService 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '61'} 
+ body=&lt;FlashStoreByCP ZipCode="98047" ShipNode="127" Distance="0"/&gt; 
+ </msg>
+<msg time="2025-01-29T11:18:47.440248" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/executeFlow/EPLFlashStoreLoadSyncService 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Access-Control-Allow-Credentials': 'true', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '62', 'Date': 'Wed, 29 Jan 2025 05:48:47 GMT'} 
+ body={"ZipCode":"98047","ShipNode":"127","Distance":"0"} 
+ </msg>
+<msg time="2025-01-29T11:18:47.440328" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>AddData</arg>
+<arg>${base_url_flow}${EPLFlashStoreLoadSyncService}</arg>
+<arg>data=${sfLoadJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.422686" elapsed="0.017657"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.440697" elapsed="0.000655"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>ZipCode</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.441600" elapsed="0.000361"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:18:47.442580" level="INFO">${Flash_Store_Key} = 98047</msg>
+<var>${Flash_Store_Key}</var>
+<arg>${response.json()}</arg>
+<arg>ZipCode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.442230" elapsed="0.000364"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-29T11:18:47.442947" level="INFO">98047</msg>
+<arg>${Flash_Store_Key}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.442860" elapsed="0.000112"/>
+</kw>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response.json()}</arg>
+<arg>ShipNode</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.443241" elapsed="0.000336"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2025-01-29T11:18:47.444191" level="INFO">${Ship_Node} = 127</msg>
+<var>${Ship_Node}</var>
+<arg>${response.json()}</arg>
+<arg>ShipNode</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.443843" elapsed="0.000363"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-29T11:18:47.444814" level="INFO">127</msg>
+<arg>${Ship_Node}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-29T11:18:47.444734" elapsed="0.000104"/>
+</kw>
+<tag>EPLFlashStoreLoadSyncService</tag>
+<tag>REGRESSION</tag>
+<status status="PASS" start="2025-01-29T11:18:47.420184" elapsed="0.025336"/>
+</test>
+<status status="PASS" start="2025-01-29T11:18:46.613453" elapsed="0.832785"/>
+</suite>
+<status status="PASS" start="2025-01-29T11:18:46.588149" elapsed="0.858879"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">EPLFlashStoreLoadSyncService</stat>
+<stat pass="1" fail="0" skip="0">REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC 001 EPLFlashStoreLoadSyncService">Test.TC 001 EPLFlashStoreLoadSyncService</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

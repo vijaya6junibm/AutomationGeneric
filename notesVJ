@@ -1,0 +1,16 @@
+This will generate a new directory with a timestamp for each test run and store the output, log, and report files inside that directory.
+$timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+New-Item -ItemType Directory -Force -Path "C:\automation\AutomationGeneric\Reports\$timestamp"
+robot --output "C:\automation\AutomationGeneric\Reports\$timestamp\output.xml" --log "C:\automation\AutomationGeneric\Reports\$timestamp\log.html" --report "C:\automation\AutomationGeneric\Reports\$timestamp\UltaCreateShippedreport.html" UltaSuite1
+
+
+$timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+New-Item -ItemType Directory -Force -Path "C:\automation\AutomationGeneric\Reports\$timestamp"
+robot --output "C:\automation\AutomationGeneric\Reports\$timestamp\output.xml" --log "C:\automation\AutomationGeneric\Reports\$timestamp\log.html" --report "C:\automation\AutomationGeneric\Reports\$timestamp\UltaCreateShippedreport.html" LvrplSL
+
+$timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
+New-Item -ItemType Directory -Force -Path "C:\automation\AutomationGeneric\Reports\$timestamp"
+robot --output "C:\automation\AutomationGeneric\Reports\$timestamp\output.xml" --log "C:\automation\AutomationGeneric\Reports\$timestamp\log.html" --report "C:\automation\AutomationGeneric\Reports\$timestamp\UltaAndLvrplreport.html" LvrplSL UltaSuite1
+
+parallel execution
+pabot --processes 4 "C:\automation\AutomationGeneric\LvrplSL\CreateOrder"

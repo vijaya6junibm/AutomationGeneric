@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2025-01-27T13:14:36.227384" rpa="false" schemaversion="5">
+<suite id="s1" name="findInventoryWithoutCapacity" source="C:\EPL-Liverpool-SL\LvrplSL\SmokeTest\HappyFlow\S03\test\findInventoryWithoutCapacity.robot">
+<test id="s1-t1" name="Manage Item TC_001" line="12">
+<kw name="Creating Session1" owner="createSession">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-27T13:14:37.224907" level="INFO">${auth} = ['admin', 'ChangeIt4m3']</msg>
+<var>${auth}</var>
+<arg>${user}</arg>
+<arg>${passwd}</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.224769" elapsed="0.000162"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-01-27T13:14:37.225251" level="INFO">Creating Session using : alias=AddData, url=http://localhost:9080/smcfs/restapi/invoke/createOrder, headers={'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46cGFzc3dvcmQ='},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001FD3BAAC050&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>${AddData}</arg>
+<arg>url=${base_url_api}${createOrder}</arg>
+<arg>headers=${headers}</arg>
+<arg>auth=${auth}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-01-27T13:14:37.225025" elapsed="0.000358"/>
+</kw>
+<arg>AddData</arg>
+<status status="PASS" start="2025-01-27T13:14:37.224314" elapsed="0.001126"/>
+</kw>
+<kw name="Manage Item With Dynamic Item" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T13:14:37.226426" level="INFO">before mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;
+after mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127131437" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;</msg>
+<msg time="2025-01-27T13:14:37.226558" level="INFO">${manageItemJson} = &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127131437" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSu...</msg>
+<var>${manageItemJson}</var>
+<status status="PASS" start="2025-01-27T13:14:37.225668" elapsed="0.000915"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-27T13:14:37.265925" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/invoke/manageItem 
+ path_url=/smcfs/restapi/invoke/manageItem 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '1022'} 
+ body=&lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127131437" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt; 
+ </msg>
+<msg time="2025-01-27T13:14:37.266042" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/invoke/manageItem 
+ status=204, reason=No Content 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '0', 'Date': 'Mon, 27 Jan 2025 07:44:37 GMT'} 
+ body=None 
+ </msg>
+<msg time="2025-01-27T13:14:37.266175" level="INFO">${manageItemResponse} = &lt;Response [204]&gt;</msg>
+<var>${manageItemResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${manageItem}</arg>
+<arg>data=${manageItemJson}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.226835" elapsed="0.039370"/>
+</kw>
+<kw name="Status Should Be" owner="RequestsLibrary">
+<arg>204</arg>
+<arg>${manageItemResponse}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.266707" elapsed="0.000289"/>
+</kw>
+<kw name="Manage Item With Dynamic Item1" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T13:14:37.282543" level="INFO">after mod &lt;ItemList&gt;
+	&lt;Item Action="Manage" GlobalItemID="12439482" ItemID="20250127131437" OrganizationCode="Liverpool" UnitOfMeasure="UN"&gt;
+		&lt;Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/&gt;
+		&lt;PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/&gt;
+		&lt;ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/&gt;
+		&lt;InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/&gt;
+		&lt;ItemAliasList Reset="Y"&gt;
+			&lt;ItemAlias AliasName="EAN1" AliasValue="7502008630089"/&gt;
+		&lt;/ItemAliasList&gt;
+	&lt;/Item&gt;
+&lt;/ItemList&gt;</msg>
+<msg time="2025-01-27T13:14:37.282843" level="INFO">${jsonItemId} = {'ItemList': {'Item': {'_Action': 'Manage', '_GlobalItemID': '12439482', '_ItemID': '20250127131437', '_OrganizationCode': 'Liverpool', '_UnitOfMeasure': 'UN', 'Extn': {'_ExtnActive': '01', '_ExtnItem...</msg>
+<var>${jsonItemId}</var>
+<status status="PASS" start="2025-01-27T13:14:37.267313" elapsed="0.015559"/>
+</kw>
+<kw name="Find Inventory File" owner="Prepare_Xml_Content">
+<msg time="2025-01-27T13:14:37.283538" level="INFO">${jsonfindInventory} = &lt;Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool"
+ OrganizationCode="Liverpool"&gt;
+	&lt;ShipToAddress Country="MX" ZipCode="98...</msg>
+<var>${jsonfindInventory}</var>
+<arg>${jsonItemId}[ItemList][Item][_ItemID]</arg>
+<status status="PASS" start="2025-01-27T13:14:37.283173" elapsed="0.000390"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2025-01-27T13:14:37.855069" level="INFO">POST Request : url=http://localhost:9080/smcfs/restapi/invoke/findInventory 
+ path_url=/smcfs/restapi/invoke/findInventory 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Authorization': 'Basic YWRtaW46Q2hhbmdlSXQ0bTM=', 'Content-Length': '338'} 
+ body=&lt;Promise AllocationRuleID="FWD_RULES" CheckInventory="Y" EnterpriseCode="Liverpool" FulfillmentType="Fulfillment_Type_Liverpool"
+ OrganizationCode="Liverpool"&gt;
+	&lt;ShipToAddress Country="MX" ZipCode="98047"/&gt;
+	&lt;PromiseLines&gt;
+		&lt;PromiseLine ItemID="20250127131437" LineId="1" RequiredQty="20" UnitOfMeasure="UN"/&gt;
+	&lt;/PromiseLines&gt;
+&lt;/Promise&gt; 
+ </msg>
+<msg time="2025-01-27T13:14:37.855157" level="INFO">POST Response : url=http://localhost:9080/smcfs/restapi/invoke/findInventory 
+ status=200, reason=OK 
+ headers={'X-FRAME-OPTIONS': 'SAMEORIGIN', 'X-UA-Compatible': 'IE=EmulateIE8', 'Access-Control-Allow-Credentials': 'true', 'Access-Control-Allow-Origin': '*', 'Access-Control-Max-Age': '3600', 'Content-Type': 'application/json; charset=UTF-8', 'Content-Encoding': 'gzip', 'Content-Language': 'en-US', 'Vary': 'Accept-Encoding', 'Content-Length': '965', 'Date': 'Mon, 27 Jan 2025 07:44:37 GMT'} 
+ body={"Options":{"TotalNumberOfRecords":"0"},"OptimizationType":"02","CheckInventory":"Y","AllocationRuleID":"FWD_RULES","SuggestedOption":{"UnavailableLines":{"UnavailableLine":[{"UnavailableReason":"NOT_ENOUGH_PRODUCT_CHOICES","Messages":{"Message":[{"Text":"Ensure inventory capacity for node is available - 390"},{"Text":"Ensure inventory capacity for node is available - 275"},{"Text":"Ensure inventory capacity for node is available - 393"},{"Text":"Ensure inventory capacity for node is available - 312"},{"Text":"Ensure inventory capacity for node is available - 311"},{"Text":"Ensure inventory capacity for node is available - 310"},{"Text":"Ensure inventory capacity for node is available - 277"},{"Text":"Ensure inventory capacity for node is available - 276"},{"Text":"Ensure inventory capacity for node is available - 79"},{"Text":"Ensure inventory capacity for node is available - 78"},{"Text":"Ensure inventory capacity for node is available - 308"},{"Text":"Ensure inventory capacity for node is available - 77"},{"Text":"Ensure inventory capacity for node is available - 307"},{"Text":"Ensure inventory capacity for node is available - 76"},{"Text":"Ensure inventory capacity for node is available - 71"},{"Text":"Ensure inventory capacity for node is available - 70"},{"Text":"Ensure inventory capacity for node is available - 75"},{"Text":"Ensure inventory capacity for node is available - 74"},{"Text":"Ensure inventory capacity for node is available - 73"},{"Text":"Ensure inventory capacity for node is available - 72"},{"Text":"Ensure inventory capacity for node is available - 380"},{"Text":"Ensure inventory capacity for node is available - 383"},{"Text":"Ensure inventory capacity for node is available - 140"},{"Text":"Ensure inventory capacity for node is available - 261"},{"Text":"Ensure inventory capacity for node is available - 389"},{"Text":"Ensure inventory capacity for node is available - 300"},{"Text":"Ensure inventory capacity for node is available - 387"},{"Text":"Ensure inventory capacity for node is available - 386"},{"Text":"Ensure inventory capacity for node is available - 305"},{"Text":"Ensure inventory capacity for node is available - 304"},{"Text":"Ensure inventory capacity for node is available - 303"},{"Text":"Ensure inventory capacity for node is available - 302"},{"Text":"Ensure inventory capacity for node is available - 7"},{"Text":"Ensure inventory capacity for node is available - 89"},{"Text":"Ensure inventory capacity for node is available - 418"},{"Text":"Ensure inventory capacity for node is available - 6"},{"Text":"Ensure inventory capacity for node is available - 88"},{"Text":"Ensure inventory capacity for node is available - 417"},{"Text":"Ensure inventory capacity for node is available - 87"},{"Text":"Ensure inventory capacity for node is available - 5"},{"Text":"Ensure inventory capacity for node is available - 4"},{"Text":"Ensure inventory capacity for node is available - 3"},{"Text":"Ensure inventory capacity for node is available - 2"},{"Text":"Ensure inventory capacity for node is available - 1"},{"Text":"Ensure inventory capacity for node is available - 82"},{"Text":"Ensure inventory capacity for node is available - 81"},{"Text":"Ensure inventory capacity for node is available - 80"},{"Text":"Ensure inventory capacity for node is available - 86"},{"Text":"Ensure inventory capacity for node is available - 85"},{"Text":"Ensure inventory capacity for node is available - 84"},{"Text":"Ensure inventory capacity for node is available - 83"},{"Text":"Ensure inventory capacity for node is available - 253"},{"Text":"Ensure inventory capacity for node is available - 136"},{"Text":"Ensure inventory capacity for node is available - 378"},{"Text":"Ensure inventory capacity for node is available - 135"},{"Text":"Ensure inventory capacity for node is available - 256"},{"Text":"Sourcing rule found - sourcing rule key being used is : 202501021727061559131"},{"Text":"Ensure inventory capacity for node is available - 134"},{"Text":"Ensure inventory capacity for node is available - 255"},{"Text":" No choices generated for the line"},{"Text":"Ensure inventory capacity for node is available - 379"},{"Text":"Ensure inventory capacity for node is available - 925"},{"Text":"Ensure inventory capacity for node is available - 12"},{"Text":"Ensure inventory capacity for node is available - 11"},{"Text":"Ensure inventory capacity for node is available - 10"},{"Text":"Ensure inventory capacity for node is available - 17"},{"Text":"Ensure inventory capacity for node is available - 16"},{"Text":"Ensure inventory capacity for node is available - 15"},{"Text":"Ensure inventory capacity for node is available - 14"},{"Text":"Ensure inventory capacity for node is available - 926"},{"Text":"Ensure inventory capacity for node is available - 121"},{"Text":"Ensure inventory capacity for node is available - 360"},{"Text":"Ensure inventory capacity for node is available - 125"},{"Text":"Ensure inventory capacity for node is available - 246"},{"Text":"Ensure inventory capacity for node is available - 19"},{"Text":"Ensure inventory capacity for node is available - 244"},{"Text":"Ensure inventory capacity for node is available - 760"},{"Text":"Ensure inventory capacity for node is available - 766"},{"Text":"Ensure inventory capacity for node is available - 127"},{"Text":"Ensure inventory capacity for node is available - 126"},{"Text":"Ensure inventory capacity for node is available - 22"},{"Text":"Ensure inventory capacity for node is available - 21"},{"Text":"Ensure inventory capacity for node is available - 757"},{"Text":"Ensure inventory capacity for node is available - 28"},{"Text":"Ensure inventory capacity for node is available - 25"},{"Text":"Ensure inventory capacity for node is available - 194"},{"Text":"Ensure inventory capacity for node is available - 192"},{"Text":"Ensure inventory capacity for node is available - 191"},{"Text":"Ensure inventory capacity for node is available - 110"},{"Text":"Ensure inventory capacity for node is available - 352"},{"Text":"Ensure inventory capacity for node is available - 472"},{"Text":"Ensure inventory capacity for node is available - 351"},{"Text":"Ensure inventory capacity for node is available - 471"},{"Text":"Ensure inventory capacity for node is available - 1011"},{"Text":"Ensure inventory capacity for node is available - 195"},{"Text":"Ensure inventory capacity for node is available - 113"},{"Text":"Ensure inventory capacity for node is available - 354"},{"Text":"Ensure inventory capacity for node is available - 29"},{"Text":"Ensure inventory capacity for node is available - 199"},{"Text":"Ensure inventory capacity for node is available - 353"},{"Text":"Ensure inventory capacity for node is available - 239"},{"Text":"Ensure inventory capacity for node is available - 756"},{"Text":"Ensure inventory capacity for node is available - 117"},{"Text":"Ensure inventory capacity for node is available - 359"},{"Text":"Ensure inventory capacity for node is available - 238"},{"Text":"Ensure inventory capacity for node is available - 755"},{"Text":"Ensure inventory capacity for node is available - 754"},{"Text":"Ensure inventory capacity for node is available - 357"},{"Text":"Ensure inventory capacity for node is available - 753"},{"Text":"Ensure inventory capacity for node is available - 34"},{"Text":"Ensure inventory capacity for node is available - 37"},{"Text":"Ensure inventory capacity for node is available - 36"},{"Text":"Ensure inventory capacity for node is available - 31"},{"Text":"Ensure inventory capacity for node is available - 180"},{"Text":"Ensure inventory capacity for node is available - 462"},{"Text":"Ensure inventory capacity for node is available - 186"},{"Text":"Ensure inventory capacity for node is available - 340"},{"Text":"Ensure inventory capacity for node is available - 461"},{"Text":"Ensure inventory capacity for node is available - 460"},{"Text":"Ensure inventory capacity for node is available - 103"},{"Text":"Ensure inventory capacity for node is available - 102"},{"Text":"Ensure inventory capacity for node is available - 189"},{"Text":"Ensure inventory capacity for node is available - 343"},{"Text":"Ensure inventory capacity for node is available - 463"},{"Text":"Ensure inventory capacity for node is available - 349"},{"Text":"Ensure inventory capacity for node is available - 106"},{"Text":"Ensure inventory capacity for node is available - 469"},{"Text":"Ensure inventory capacity for node is available - 105"},{"Text":"Ensure inventory capacity for node is available - 468"},{"Text":"Ensure inventory capacity for node is available - 104"},{"Text":"Ensure inventory capacity for node is available - 46"},{"Text":"Ensure inventory capacity for node is available - 45"},{"Text":"Ensure inventory capacity for node is available - 44"},{"Text":"Ensure inventory capacity for node is available - 43"},{"Text":"Ensure inventory capacity for node is available - 339"},{"Text":"Ensure inventory capacity for node is available - 48"},{"Text":"Ensure inventory capacity for node is available - 47"},{"Text":"Ensure inventory capacity for node is available - 42"},{"Text":"Ensure inventory capacity for node is available - 41"},{"Text":"Ensure inventory capacity for node is available - 40"},{"Text":"Ensure inventory capacity for node is available - 292"},{"Text":"Ensure inventory capacity for node is available - 170"},{"Text":"Ensure inventory capacity for node is available - 291"},{"Text":"Ensure inventory capacity for node is available - 176"},{"Text":"Ensure inventory capacity for node is available - 693"},{"Text":"Ensure inventory capacity for node is available - 175"},{"Text":"Ensure inventory capacity for node is available - 296"},{"Text":"Ensure inventory capacity for node is available - 173"},{"Text":"Ensure inventory capacity for node is available - 455"},{"Text":"Ensure inventory capacity for node is available - 697"},{"Text":"Ensure inventory capacity for node is available ... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg time="2025-01-27T13:14:37.855418" level="INFO">${findInventoryResponse} = &lt;Response [200]&gt;</msg>
+<var>${findInventoryResponse}</var>
+<arg>AddData</arg>
+<arg>${base_url_api}${findInventory}</arg>
+<arg>data=${jsonfindInventory}</arg>
+<arg>headers=${headers}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.283851" elapsed="0.571590"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>'block****************'</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.855755" elapsed="0.000342"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${findInventoryResponse.json()}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.856353" elapsed="0.002529"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2025-01-27T13:14:37.859676" level="INFO">${resp} = {'Options': {'TotalNumberOfRecords': '0'}, 'OptimizationType': '02', 'CheckInventory': 'Y', 'AllocationRuleID': 'FWD_RULES', 'SuggestedOption': {'UnavailableLines': {'UnavailableLine': [{'UnavailableR...</msg>
+<var>${resp}</var>
+<arg>${findInventoryResponse.json()}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.859096" elapsed="0.000608"/>
+</kw>
+<kw name="Write Output File" owner="Prepare_Xml_Content">
+<arg>${resp}</arg>
+<arg>'findInv'</arg>
+<status status="PASS" start="2025-01-27T13:14:37.860004" elapsed="0.000743"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>NOT_ENOUGH_PRODUCT_CHOICES</arg>
+<arg>${findInventoryResponse.json()}[SuggestedOption][UnavailableLines][UnavailableLine][0][UnavailableReason]</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-01-27T13:14:37.861033" elapsed="0.000754"/>
+</kw>
+<tag>HAPPYFLOW</tag>
+<status status="PASS" start="2025-01-27T13:14:37.223713" elapsed="0.638346"/>
+</test>
+<status status="PASS" start="2025-01-27T13:14:36.228946" elapsed="1.633729"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">HAPPYFLOW</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="findInventoryWithoutCapacity">findInventoryWithoutCapacity</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

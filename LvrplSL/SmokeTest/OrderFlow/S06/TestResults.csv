@@ -1,0 +1,90 @@
+Schedule Order TC_001,20250127-1546,20250127154621,"<!-- order start with DraftOrder. purpose of PersonInfoContact  -->
+<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderType=""Personal"" OrderNo=""20250127154621"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemDesc=""FAMOSA NANCY BAIL"" ItemID=""20250127154621"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""899.00""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName=""""
+        MobilePhone="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoShipTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoContact AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250127154621', 'OrderHeaderKey': '20250127101622910192', 'EnterpriseCode': 'Liverpool'}"
+Schedule Order TC_001,20250127-1546,20250127154654,"<!-- order start with DraftOrder. purpose of PersonInfoContact  -->
+<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderType=""Personal"" OrderNo=""20250127154654"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemDesc=""FAMOSA NANCY BAIL"" ItemID=""20250127154654"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""899.00""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName=""""
+        MobilePhone="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoShipTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoContact AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250127154654', 'OrderHeaderKey': '20250127101655910224', 'EnterpriseCode': 'Liverpool'}"
+Schedule Order TC_001,20250127-1547,20250127154708,"<!-- order start with DraftOrder. purpose of PersonInfoContact  -->
+<Order Action=""CREATE"" AllocationRuleID=""FWD_RULES"" CustomerPONo=""""
+    CustomerRewardsNo="""" DepartmentCode="""" Division=""""
+    DocumentType=""0001"" DraftOrderFlag=""Y"" EnterpriseCode=""Liverpool"" OrderType=""Personal"" OrderNo=""20250127154708"">
+    <OrderLines>
+        <OrderLine FulfillmentType=""Fulfillment_Type_Liverpool"" OrderedQty=""1"">
+            <Item ItemDesc=""FAMOSA NANCY BAIL"" ItemID=""20250127154708"" UnitOfMeasure=""UN""/>
+            <LinePriceInfo IsPriceLocked=""Y"" UnitPrice=""899.00""/>
+        </OrderLine>
+    </OrderLines>
+    <PersonInfoBillTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName=""""
+        MobilePhone="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoShipTo AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+    <PersonInfoContact AddressLine1=""AVENIDA 33 PONIENTE""
+        AddressLine2=""2305 "" AddressLine3=""""
+        AddressLine4=""BENITO JUAREZ"" AddressLine5=""PUEBLA"" City=""PUEBLA""
+        Country=""MX"" DayPhone=""222 03888534""
+        EMailID=""ISAVELA0102@GMAIL.COM""
+        FirstName=""MARIA ISABEL  VELAZCO CRUZ  "" LastName="""" State=""PUE"" ZipCode=""72410""/>
+</Order>","{'DocumentType': '0001', 'OrderNo': '20250127154708', 'OrderHeaderKey': '20250127101709910256', 'EnterpriseCode': 'Liverpool'}"

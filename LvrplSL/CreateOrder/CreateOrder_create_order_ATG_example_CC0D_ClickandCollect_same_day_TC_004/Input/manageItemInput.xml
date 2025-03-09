@@ -1,0 +1,14 @@
+<!-- ExecuteType:SterlingApi -->
+<!-- ExecuteMethod:multiApi -->
+<!-- TestDesc: ItemType is STOCK ItemStatus is R and Region is S and all nodes in S region are marked as ON_HOLD -->
+<ItemList>
+	<Item Action="Manage" GlobalItemID="12439482" ItemID="$ItemID" OrganizationCode="Liverpool" UnitOfMeasure="UN">
+		<Extn ExtnActive="01" ExtnItemSF="Y" ExtnItemSFDesc="ACTIVO" ExtnSuggestedPackage="" ExtnSkuPackage=""/>
+		<PrimaryInformation DefaultProductClass="SL" Description="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ShortDescription="CHAROLA GIRATORIA AILE, 48CM, NATURAL H" ExtendedDisplayDescription="CHAROLA GIRATORIA REDO, 48 CM, NATURAL (12439482)" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed="Y" PrimaryEnterpriseCode="Liverpool" SerializedFlag="N" Status="3000" UnitCost="829" ItemType=""/>
+		<ClassificationCodes ECCNNo="HAUS" Model="18917" NAICSCode="7502008630089" NMFCClass="152" NMFCCode="15204"/>
+		<InventoryParameters ATPRule="Liverpool_ATP" InventoryMonitorRule="EPL_ATP_MONITOR_RULE" NodeLevelInventoryMonitorRule="EPL_ATP_MONITOR_RULE"/>
+		<ItemAliasList Reset="Y">
+			<ItemAlias AliasName="EAN1" AliasValue="7502008630089"/>
+		</ItemAliasList>
+	</Item>
+</ItemList>
