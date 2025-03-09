@@ -7,7 +7,6 @@ Library           OperatingSystem
 *** Variables ***
 ${dev_b_token}    Bearer CuDeHLMXIo1u7i3kh22WIVh5w3iCIDDV
 ${dev_b_server}    https://api.watsoncommerce.ibm.com
-${params}         kod=BI1K
 
 *** Test Cases ***
 Do a GET Request with Bearer token

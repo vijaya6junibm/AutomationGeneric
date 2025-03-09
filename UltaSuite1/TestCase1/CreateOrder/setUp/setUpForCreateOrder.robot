@@ -91,4 +91,22 @@ Fetch Order Output
     ${output}=  Get From Dictionary  ${api}  Output
     # Now access the 'Order' dictionary within 'Output'
     ${order}=  Get From Dictionary  ${output}  Order
-    
+
+Create Order
+    [Arguments]         ${CUR_DIR}
+    ${createOrderReq}=     Generic Input File   ${CUR_DIR}    ${createOrder_Input_file_Name}
+    ${createOrderResp}=     Creating Session Sample1    ${createOrder_Input_file_Name}   ${createOrderReq}
+    RETURN     ${createOrderResp}
+
+Fetch Order No
+    [Arguments]         ${createOrderResp}
+    ${order}=     Get Element    ${createOrderResp.content}    .//Order
+    ${OrderNo}=    Get Element Attribute    ${order}    OrderNo
+    RETURN     ${OrderNo}
+
+Fetch OrderHeaderKey
+    [Arguments]         ${createOrderResp}
+    ${order}=     Get Element    ${createOrderResp.content}    .//Order
+    ${OrderHeaderKey}=    Get Element Attribute    ${order}    OrderHeaderKey
+    RETURN     ${OrderHeaderKey}
+
