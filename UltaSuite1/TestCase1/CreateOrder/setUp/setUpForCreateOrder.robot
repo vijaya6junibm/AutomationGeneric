@@ -51,7 +51,28 @@ Manage MultiApi Ulta
     status should be       200     ${response}
     ${response1}=    Convert Json To Xml    ${response.json()}
     RETURN    ${response}
-    
+
+Confirm Shipment
+    [Arguments]         ${OrderNo}    ${OrderHeaderKey}
+    ${getOrderReleaseListxmlRequest}=     Generic Input File Oh     ${CUR_DIR}    ${getOrderReleaseList_Input_file_Name}    ${OrderHeaderKey}
+    ${resp}=     Creating Session Sample1    ${getOrderReleaseList_Input_file_Name}   ${getOrderReleaseListxmlRequest}
+    ${getOrderDetailResp}=    Get Order Details    ${CUR_DIR}   Released    ${OrderNo}
+    ${order}=     Get Element    ${getOrderDetailResp.content}    .//Order
+    ${Status}=    Get Element Attribute    ${order}    Status
+    ${OrderLine}=     Get Element    ${getOrderDetailResp.content}    .//OrderLine
+    ${OrderLineKey}=    Get Element Attribute    ${OrderLine}    OrderLineKey
+    ${OrderedQty}=    Get Element Attribute    ${OrderLine}    OrderedQty
+    Parse XML    ${resp.content}
+    ${orderAttr}=     Get Element    ${resp.content}    .//OrderReleaseList/OrderRelease
+    ${orderReleaseKey}=    Get Element Attribute    ${orderAttr}    OrderReleaseKey
+    ${CarrierServiceCode}=    Get Element Attribute    ${orderAttr}    CarrierServiceCode
+    ${DocumentType}=    Get Element Attribute    ${orderAttr}    DocumentType
+    ${EnterpriseCode}=    Get Element Attribute    ${orderAttr}    EnterpriseCode
+    ${SCAC}=    Get Element Attribute    ${orderAttr}    SCAC
+    ${ShipNode}=    Get Element Attribute    ${orderAttr}    ShipNode
+    ${confirmShipmentXmlRequest}=     Generic Input File Ship     ${CUR_DIR}    ${confirmShipment_Input_file_Name}    ${orderReleaseKey}     ${CarrierServiceCode}    ${EnterpriseCode}    ${SCAC}    ${ShipNode}    ${OrderLineKey}    ${OrderedQty}    ${DocumentType}    ${OrderNo}
+    RETURN     ${confirmShipmentXmlRequest}
+
 Get Order Details
     [Arguments]         ${CUR_DIR}    ${status_name}    ${OrderNo}
     ${getOrderDetailsxmlRequest}=     Generic Input File Ord    ${CUR_DIR}    ${getOrderDetails_Input_file_Name}    ${OrderNo}
